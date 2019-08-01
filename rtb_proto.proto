@@ -11,7 +11,7 @@ option java_outer_classname = "RtbProtos";
 message BidRequest {
   optional string id = 1;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
   optional int32 at = 2;                       // [保留字段]第一高价还是第二高价竞价
-  repeated Imp imp = 3;                        // 曝光机会，一次请求包含多个曝光机会，要求必须处理一次请求的所有曝光机会
+  repeated Imp imp = 3;                        // 曝光机会，目前只有一个
   optional Site site = 4;                       // [保留字段] 媒体站点信息(PC端)
   optional Device device = 5;                   // 设备信息
   optional User user = 6;                       // 用户信息
@@ -130,7 +130,7 @@ message BidResponse {
           optional int32 w = 1;                 // 图片宽度
           optional int32 h = 2;                 // 图片高度
           optional string url = 3;              // 图片地址
-        } 
+        }
         message Video {
           optional int32 w = 1;                 // 视频宽度
           optional int32 h = 2;                 // 视频高度
