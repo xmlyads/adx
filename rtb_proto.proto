@@ -11,7 +11,7 @@ option java_outer_classname = "RtbProtos";
 message BidRequest {
   optional string id = 1;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
   optional int32 at = 2;                       // [保留字段]第一高价还是第二高价竞价
-  repeated Impression impression = 3;           // 曝光机会，一次请求包含多个曝光机会，要求必须处理一次请求的所有曝光机会
+  repeated Imp imp = 3;                        // 曝光机会，一次请求包含多个曝光机会，要求必须处理一次请求的所有曝光机会
   optional Site site = 4;                       // [保留字段] 媒体站点信息(PC端)
   optional Device device = 5;                   // 设备信息
   optional User user = 6;                       // 用户信息
@@ -49,7 +49,7 @@ message BidRequest {
       message Asset {
         optional Text text = 1;                 // 文字对象
         optional Image image = 2;               // 图片对象
-        BidRequest.Imp.Video video = 3;         // 视频对象
+        optional BidRequest.Imp.Video video = 3;         // 视频对象
         message Text {
           optional int32 len = 1;               // 允许的文字长度
         }
@@ -79,9 +79,9 @@ message BidRequest {
     optional int32 w = 11;                      // 设备屏幕横向分辨率
     optional string os = 12;                    // 操作系统名称（iPhone OS, Android等）
     optional string osv = 13;                   // 操作系统版本
-    optional integer carrier = 14;              // 运营商 0，移动；1，联通； 2，电信；3，其它
-    optional integer connectiontype = 14;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它
-    optional string make = 15;                  // 手机品牌，如：iPhone，Xiaomi
+    optional int32 carrier = 14;              // 运营商 0，移动；1，联通； 2，电信；3，其它
+    optional int32 connectiontype = 15;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它
+    optional string make = 16;                  // 手机品牌，如：iPhone，Xiaomi
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
       optional double lon = 2;                  // 经度：-180至+180
@@ -109,14 +109,35 @@ message BidResponse {
     optional float price = 3;                   // DSP出价，分/千次曝光
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
-    optional string crid = 5;                   // DSP侧创意ID，目前可不填
-    optional Native native = 6;                 // Native素材对象
-    optional string clickurl = 7;               // 点击跳转地址
-    repeated string monitorurls = 8;            // 曝光监测地址
-    repeated string clickmonitorurls = 9;       // 点击监测地址
-    optional int32 style = 10;                  // 展示类型：对应BidRequest中的style
-    optional int32 clicktype = 11;              // 点击类型：对应BidRequest中的clicktype
-    optional AppInfo appinfo = 12;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
+    optional string crid = 6;                   // DSP侧创意ID，目前可不填
+    optional Native native = 7;                 // Native素材对象
+    optional string clickurl = 8;               // 点击跳转地址
+    repeated string monitorurls = 9;            // 曝光监测地址
+    repeated string clickmonitorurls = 10;       // 点击监测地址
+    optional int32 style = 11;                  // 展示类型：对应BidRequest中的style
+    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
+    optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
+    message Native {
+      repeated Asset assets = 1;                // Native 物料列表
+      message Asset {
+        optional Text text = 1;                 // 文字物料
+        optional Image image = 2;               // 图片物料
+        optional Video video = 3;               // 视频物料
+        message Text {
+          optional string v = 1;                // 文字内容
+        }
+        message Image {
+          optional int32 w = 1;                 // 图片宽度
+          optional int32 h = 2;                 // 图片高度
+          optional string url = 3;              // 图片地址
+        } 
+        message Video {
+          optional int32 w = 1;                 // 视频宽度
+          optional int32 h = 2;                 // 视频高度
+          optional int32 url = 3;               // 视频地址
+        }
+      }
+    }
     message AppInfo {
       optional string dplink = 1;               // 唤起APP Scheme
       optional string appname = 2;              // 要唤起的APP名称
