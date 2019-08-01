@@ -1,0 +1,126 @@
+// Copyright (c) 2019 www.ximalaya.com Inc.
+
+syntax = "proto2";
+
+package com.ximalaya.adx.api;
+
+option java_outer_classname = "RtbProtos";
+
+// 注意：[保留字段] 当前暂时没有使用，可直接忽略
+
+message BidRequest {
+  optional string id = 1;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
+  optional int32 at = 2;                       // [保留字段]第一高价还是第二高价竞价
+  repeated Impression impression = 3;           // 曝光机会，一次请求包含多个曝光机会，要求必须处理一次请求的所有曝光机会
+  optional Site site = 4;                       // [保留字段] 媒体站点信息(PC端)
+  optional Device device = 5;                   // 设备信息
+  optional User user = 6;                       // 用户信息
+  optional App app = 7;                         // APP信息
+  message Imp {
+    required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
+    optional string tagid = 2;                  // 广告位ID，详见广告位映射表
+    repeated StyleType style = 3;               // 允许的展示及点击形式
+    optional float bidfloor = 4;                // [保留字段] RTB竞价底价(分/千次曝光)
+    optional Banner banner = 5;                 // [保留字段] Banner广告对象
+    optional Video video = 6;                   // [保留字段] Video广告对象（目前未使用)
+    optional Native native = 7;                 // 原生广告对象（目前所有广告都使用这个对象）
+    repeated string dealid = 8;                 // 描述PDB/PD类型的Deal信息，目前只有一个
+    optional string forbidtrade = 9;            // [保留字段] 广告位行业限制信息
+    optional string date = 10;                  // 广告曝光日期，格式YYYY-MM-DD
+    message StyleType {
+      optional int32 style = 1;                // 展示形式，详见展示形式映射表
+      repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载
+    }
+    message Banner {
+      optional int32 w = 1;                    // 广告位宽度
+      optional int32 h = 2;                    // 广告位高度
+      repeated string mimes = 3;                // 支持的素材类型(如 "jpg","txt")
+    }
+    message Video {
+      repeated string mimes = 1;                // 支持播放的mimes(如 "flv","mp4")
+      optional int32 minduration = 2;          // 最短时长，单位毫秒
+      optional int32 maxduration = 3;          // 最长时长，单位毫秒
+      optional int32 w = 4;                    // 广告位宽度
+      optional int32 h = 5;                    // 广告位高度
+    }
+    message Native {
+      optional int32 seq = 1 [default = 0];     // [保留字段] 广告位置: 0 - 第一条广告；1 - 第二条广告...依次类推
+      repeated Asset assets = 2;                // 广告中包含的元素对象列表
+      message Asset {
+        optional Text text = 1;                 // 文字对象
+        optional Image image = 2;               // 图片对象
+        BidRequest.Imp.Video video = 3;         // 视频对象
+        message Text {
+          optional int32 len = 1;               // 允许的文字长度
+        }
+        message Image {
+          optional int32 w = 1;                 // 图片宽度
+          optional int32 h = 2;                 // 图片长度
+          repeated string mimes = 3;            // 支持的图片格式(如"jpeg","gif")
+        }
+      }
+    }
+  }
+  message Site {
+    optional string name = 1;                   // 网站名称 （pc专用）
+    optional string page = 2;                   // 当前页面url （pc专用）
+  }
+  message Device {
+    optional string ua = 1;                     // UA信息
+    optional string ip = 2;                     // 用户设备ip
+    optional Geo geo = 3;                       // 地理位置
+    optional string idfamd5 = 4;                // IDFA MD5加密转大写
+    optional string imeimd5 = 5;                // IMEI MD5加密转大写
+    optional string androididmd5 = 6;           // AndroidID MD5加密转大写
+    optional string openudidmd5 = 7;            // OpenUDID，MD5加密转大写
+    optional string macmd5 = 8;                 // MAC地址 MD5加密转大写，加密前先去除分隔符':'
+    optional int32 devicetype = 9;             // 设备类型：0，未知；1，Phone；2，PC；3，TV；4，PAD；5，outdoor（户外设备）目前设备类型只有1，4两种
+    optional int32 h = 10;                      // 设备屏幕纵向分辨率
+    optional int32 w = 11;                      // 设备屏幕横向分辨率
+    optional string os = 12;                    // 操作系统名称（iPhone OS, Android等）
+    optional string osv = 13;                   // 操作系统版本
+    optional integer carrier = 14;              // 运营商 0，移动；1，联通； 2，电信；3，其它
+    optional integer connectiontype = 14;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它
+    optional string make = 15;                  // 手机品牌，如：iPhone，Xiaomi
+    message Geo {
+      optional double lat = 1;                  // 维度：-90至+90
+      optional double lon = 2;                  // 经度：-180至+180
+    }
+  }
+  message User {  
+    optional string id = 1;                     // 用户唯一标识（喜马拉雅侧用户uid）
+  }
+  message App {
+    optional string name = 1;                   // 应用名称：喜马拉雅FM
+    optional string pkgname = 2;                // 应用程序包名：com.ximalaya.iting
+    repeated string category = 3;               // 应用所属分类：电台、有声书、娱乐 
+  }
+}
+message BidResponse {
+  optional string id = 1;                       // 请求ID，需与BidRequest.id一致，DSP参与竞价时必须具有该字段
+  optional string bidid = 2;                    // dsp侧竞价ID，可不填
+  repeated SeatBid seatbid = 3;                 // DSP参与竞价的具体内容，目前只有一个
+  message SeatBid {
+    repeated Bid bid = 1;                       // DSP参与竞价的位置，与BidRequest.imp对应，每个imp最多只可返回一个bid
+  }
+  message Bid {
+    optional string id = 1;                     // dsp侧针对这次竞价的ID
+    optional string impid = 2;                  // 曝光ID，对应BidRequest.imp.id，必填！
+    optional float price = 3;                   // DSP出价，分/千次曝光
+    optional string curl = 4;                   // Banner或Video素材的URL
+    optional int32 videoduration = 5;           // Video素材的时长
+    optional string crid = 5;                   // DSP侧创意ID，目前可不填
+    optional Native native = 6;                 // Native素材对象
+    optional string clickurl = 7;               // 点击跳转地址
+    repeated string monitorurls = 8;            // 曝光监测地址
+    repeated string clickmonitorurls = 9;       // 点击监测地址
+    optional int32 style = 10;                  // 展示类型：对应BidRequest中的style
+    optional int32 clicktype = 11;              // 点击类型：对应BidRequest中的clicktype
+    optional AppInfo appinfo = 12;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
+    message AppInfo {
+      optional string dplink = 1;               // 唤起APP Scheme
+      optional string appname = 2;              // 要唤起的APP名称
+      optional string pkgname = 3;              // 要唤起的APP pkgname
+    }
+  }
+}
