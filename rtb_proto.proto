@@ -2,7 +2,7 @@
 
 syntax = "proto2";
 
-package com.ximalaya.adx.api;
+package com.ximalaya.ad.adx.api;
 
 option java_outer_classname = "RtbProtos";
 
@@ -23,13 +23,13 @@ message BidRequest {
     optional float bidfloor = 4;                // [保留字段] RTB竞价底价(分/千次曝光)
     optional Banner banner = 5;                 // [保留字段] Banner广告对象
     optional Video video = 6;                   // [保留字段] Video广告对象（目前未使用)
-    optional Native native = 7;                 // 原生广告对象（目前所有广告都使用这个对象）
     repeated string dealid = 8;                 // 描述PDB/PD类型的Deal信息，目前只有一个
     optional string forbidtrade = 9;            // [保留字段] 广告位行业限制信息
     optional string date = 10;                  // 广告曝光日期，格式YYYY-MM-DD
     message StyleType {
       optional int32 style = 1;                // 展示形式，详见展示形式映射表
       repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载
+      optional Native native = 7;             // 原生广告对象（目前所有广告都使用这个对象） 
     }
     message Banner {
       optional int32 w = 1;                    // 广告位宽度
@@ -50,6 +50,7 @@ message BidRequest {
         optional Text text = 1;                 // 文字对象
         optional Image image = 2;               // 图片对象
         optional BidRequest.Imp.Video video = 3;         // 视频对象
+        optional Audit audit = 4;               // 声音对象
         message Text {
           optional int32 len = 1;               // 允许的文字长度
         }
@@ -57,6 +58,11 @@ message BidRequest {
           optional int32 w = 1;                 // 图片宽度
           optional int32 h = 2;                 // 图片长度
           repeated string mimes = 3;            // 支持的图片格式(如"jpeg","gif")
+        }
+        message Audit {
+          repeated string mimes = 1;           // 支持播放的mimes
+          optional int32 minduration = 2;      // 最短时长，单位毫秒
+          optional int32 maxduration = 3;      // 最长时长
         }
       }
     }
@@ -88,7 +94,7 @@ message BidRequest {
     }
   }
   message User {  
-    optional string id = 1;                     // 用户唯一标识（喜马拉雅侧用户uid）
+    optional string id = 1;                     // [保留字段] 用户唯一标识（喜马拉雅侧用户uid）
   }
   message App {
     optional string name = 1;                   // 应用名称：喜马拉雅FM
@@ -123,6 +129,7 @@ message BidResponse {
         optional Text text = 1;                 // 文字物料
         optional Image image = 2;               // 图片物料
         optional Video video = 3;               // 视频物料
+        optional Audit audit = 4;               // 声音物料
         message Text {
           optional string v = 1;                // 文字内容
         }
@@ -134,7 +141,12 @@ message BidResponse {
         message Video {
           optional int32 w = 1;                 // 视频宽度
           optional int32 h = 2;                 // 视频高度
-          optional int32 url = 3;               // 视频地址
+          optional string url = 3;              // 视频地址
+          optional int32 duration = 4;          // 视频时长
+        }
+        message Audit {
+          optional string url = 1;              // 声音地址
+          optional int32 duration = 2;          // 声音时长
         }
       }
     }
