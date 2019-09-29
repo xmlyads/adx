@@ -29,7 +29,8 @@ message BidRequest {
     message StyleType {
       optional int32 style = 1;                // 展示形式，详见展示形式映射表
       repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载
-      optional Native native = 7;             // 原生广告对象（目前所有广告都使用这个对象） 
+      optional bool needsound = 3;           // 是否需要声音，如需要声音，则会在native.assets中追加声音规格要求
+      optional Native native = 4;             // 原生广告对象（目前所有广告都使用这个对象） 
     }
     message Banner {
       optional int32 w = 1;                    // 广告位宽度
