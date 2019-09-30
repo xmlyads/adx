@@ -9,13 +9,14 @@ option java_outer_classname = "RtbProtos";
 // 注意：[保留字段] 当前暂时没有使用，可直接忽略
 
 message BidRequest {
-  optional string id = 1;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
-  optional int32 at = 2;                       // [保留字段]第一高价还是第二高价竞价
-  repeated Imp imp = 3;                        // 曝光机会，目前只有一个
-  optional Site site = 4;                       // [保留字段] 媒体站点信息(PC端)
-  optional Device device = 5;                   // 设备信息
-  optional User user = 6;                       // 用户信息
-  optional App app = 7;                         // APP信息
+  optional string api_version = 1;              // rtb协议版本（目前固定为"v1.0"）
+  optional string id = 2;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
+  optional int32 at = 3;                       // [保留字段]第一高价还是第二高价竞价
+  repeated Imp imp = 4;                        // 曝光机会，目前只有一个
+  optional Site site = 5;                       // [保留字段] 媒体站点信息(PC端)
+  optional Device device = 6;                   // 设备信息
+  optional User user = 7;                       // 用户信息
+  optional App app = 8;                         // APP信息
   message Imp {
     required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
     optional string tagid = 2;                  // 广告位ID，详见广告位映射表
