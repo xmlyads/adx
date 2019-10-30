@@ -154,7 +154,7 @@ message BidResponse {
       }
     }
     message AppInfo {
-      optional string dplink = 1;               // 唤起APP Scheme
+      optional string dplink = 1;               // 唤起APP Scheme，IOS Universal Links也填充到该字段中
       optional string appname = 2;              // 要唤起的APP名称
       optional string pkgname = 3;              // 要唤起的APP pkgname
     }
