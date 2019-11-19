@@ -47,7 +47,7 @@ message BidRequest {
     }
     message Native {
       optional int32 seq = 1 [default = 0];     // [保留字段] 广告位置: 0 - 第一条广告；1 - 第二条广告...依次类推
-      repeated Asset assets = 2;                // 广告中包含的元素对象列表
+      repeated Asset assets = 2;                // 广告中包含的元素对象列表，注意：以下Text/Image/Video/Audit结构仅会出现一个
       message Asset {
         optional Text text = 1;                 // 文字对象
         optional Image image = 2;               // 图片对象
@@ -127,7 +127,7 @@ message BidResponse {
     optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
     optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
     message Native {
-      repeated Asset assets = 1;                // Native 物料列表
+      repeated Asset assets = 1;                // Native 物料列表，注意：以下Text/Image/Video/Audit结构仅会出现一个
       message Asset {
         optional Text text = 1;                 // 文字物料
         optional Image image = 2;               // 图片物料
