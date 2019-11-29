@@ -19,7 +19,7 @@ message BidRequest {
   optional App app = 8;                         // APP信息
   message Imp {
     required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
-    optional string tagid = 2;                  // 广告位ID，详见广告位映射表
+    optional string tagid = 2;                  // 广告位ID，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
     repeated StyleType style = 3;               // 允许的展示及点击形式
     optional float bidfloor = 4;                // [保留字段] RTB竞价底价(分/千次曝光)
     optional Banner banner = 5;                 // [保留字段] Banner广告对象
@@ -28,7 +28,7 @@ message BidRequest {
     optional string forbidtrade = 9;            // [保留字段] 广告位行业限制信息
     optional string date = 10;                  // 广告曝光日期，格式YYYY-MM-DD
     message StyleType {
-      optional int32 style = 1;                // 展示形式，详见展示形式映射表
+      optional int32 style = 1;                // 展示形式，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
       repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载
       optional bool needsound = 3;           // 是否需要声音，如需要声音，则会在native.assets中追加声音规格要求
       optional Native native = 4;             // 原生广告对象（目前所有广告都使用这个对象） 
