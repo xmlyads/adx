@@ -118,7 +118,7 @@ message BidResponse {
     optional float price = 3;                   // DSP出价，分/千次曝光
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
-    optional string crid = 6;                   // DSP侧创意ID，目前可不填
+    optional string crid = 6;                   // DSP侧内部创意ID，建议填写
     optional Native native = 7;                 // Native素材对象
     optional string clickurl = 8;               // 点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
     repeated string monitorurls = 9;            // 曝光监测地址
