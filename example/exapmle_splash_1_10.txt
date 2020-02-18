@@ -30,8 +30,8 @@ imp {
       }
       assets {
         image {
-          w: 0
-          h: 0
+          w: 1242
+          h: 2136
           mimes: "jpg"
           mimes: "jpeg"
           mimes: "png"
