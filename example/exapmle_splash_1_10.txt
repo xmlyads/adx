@@ -1,0 +1,112 @@
+请求：
+api_version: "v1.0"
+id: "2750780579638"
+imp {
+  id: "275078057963801"
+  tagid: "1"
+  style {
+    style: 10
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {
+        video {
+          mimes: "mp4"
+          minduration: 0
+          maxduration: 5
+          w: 640
+          h: 450
+        }
+      }
+      assets {
+        image {
+          w: 1242
+          h: 2136
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+      }
+      assets {
+        image {
+          w: 0
+          h: 0
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+      }
+    }
+  }
+  dealid: "605129"
+  date: "2020-02-18"
+}
+device {
+  ua: "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Lite Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36"
+  ip: "116.21.58.92"
+  geo {
+    lat: 0.0
+    lon: 0.0
+  }
+  imeimd5: "A65D3A958C13CDA1AB66C3B57B1F884C"
+  androididmd5: "5FAABD1059C7ED78A10937F0906DE9C1"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "1E85EAB240480E389C0D928B9DB18D84"
+  devicetype: 1
+  h: 2150
+  w: 1080
+  os: "Android27"
+  osv: "27"
+  carrier: 3
+  connectiontype: 3
+  make: "Xiaomi"
+  oaidmd5: "73C8AC3EBDE7AB5D519ECF13FC840A83"
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+响应：
+id: "2750780579638"
+bidid: "xmadx_b_275078057963801"
+seatbid {
+  bid {
+    id: "xmadx_b_275078057963801"
+    impid: "275078057963801"
+    price: 10000.0
+    curl: "http://edt.fp.ps.netease.com/file/5e460f6996dee4da2d4233b2z8lzN27d02.mp4"
+    videoduration: 5
+    crid: "533442"
+    native {
+      assets {
+        video {
+          w: 640
+          h: 450
+          url: "http://edt.fp.ps.netease.com/file/5e460f6996dee4da2d4233b2z8lzN27d02.mp4"
+          duration: 5
+        }
+      }
+      assets {
+        image {
+          w: 1242
+          h: 2136
+          url: "http://edt.fp.ps.netease.com/file/5e4365a9a7f252badd436cdaA4UQvCXS02.jpg"
+        }
+      }
+      assets {
+        image {
+          url: "" // 备胎图，当非wifi并且没有预加载到物料时展示，可以不返回，但影响展示量
+        }
+      }
+    }
+    clickurl: "http://yixiu.game.163.com/A82C39FC1F8E4D52/index.html"
+    monitorurls: "http://drpf-edt.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2750780579638&imp_id=275078057963801&tag_id=1&tag_res=410200&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40310&promotion_id=79&creative_id=2137&resg=255933&resp=533442&aid=533442&mm=29241&mt=24894&rt=1&style=2466&vid=10227&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&deal=605129&uc=4&dev_ver=1&ts=1582010943"
+    monitorurls: "http://ade-rtb.netease.com/v1/monitor/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2750780579638&imp_id=275078057963801&tag_id=1&tag_res=410200&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40310&promotion_id=79&creative_id=2137&resg=255933&resp=533442&aid=533442&mm=29241&mt=24894&rt=1&style=2466&vid=10227&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&deal=605129&uc=4&dev_ver=1&ts=1582010943"
+    clickmonitorurls: "http://drpf-edt.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2750780579638&imp_id=275078057963801&tag_id=1&tag_res=410200&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40310&creative_id=2137&resg=255933&resp=533442&mm=29241&mt=24894&rt=1&style=2466&bid_price=10000&ch_t=1&b_s=1&vid=10227&udt=2&deal=605129&uc=4&ts=1582010943"
+    clickmonitorurls: "http://drpf-g0.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2750780579638&imp_id=275078057963801&tag_id=1&tag_res=410200&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40310&creative_id=2137&resg=255933&resp=533442&mm=29241&mt=24894&rt=1&style=2466&bid_price=10000&ch_t=1&b_s=1&vid=10227&udt=2&deal=605129&uc=4&ts=1582010943"
+    style: 10
+    clicktype: 0
+  }
+}
