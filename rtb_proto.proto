@@ -27,7 +27,7 @@ message BidRequest {
     repeated string dealid = 8;                 // 描述PDB/PD类型的Deal信息，目前只有一个
     optional string forbidtrade = 9;            // [保留字段] 广告位行业限制信息
     optional string date = 10;                  // 广告曝光日期，格式YYYY-MM-DD
-    optional bool brightscreen = 11;            // 屏幕是否点亮，屏幕关闭只出有声广告（仅有声广告需要关心）
+    optional bool brightscreen = 11;            // 屏幕是否点亮，屏幕关闭只出有声广告（仅有声广告需要关心）, true: 亮屏；false: 闭屏
     message StyleType {
       optional int32 style = 1;                // 展示形式，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
       repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载
