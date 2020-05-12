@@ -54,6 +54,7 @@ message BidRequest {
         optional Image image = 2;               // 图片对象
         optional BidRequest.Imp.Video video = 3;         // 视频对象
         optional Audit audit = 4;               // 声音对象
+        optional bool isoptional = 5;           // 该元素对象是否是可选的，可选的元素对象DSP可不回复。eg. 视频大图（含泡泡条）样式所需元素列表：视频、备胎图、泡泡条图片、泡泡条文字，其中泡泡条图片和文字是可选的，DSP没有展示泡泡条的需求时，可不回复。
         message Text {
           optional int32 len = 1;               // 允许的文字长度
         }
@@ -135,6 +136,7 @@ message BidResponse {
         optional Image image = 2;               // 图片物料
         optional Video video = 3;               // 视频物料
         optional Audit audit = 4;               // 声音物料
+        optional int32 index = 5;               // 索引，对应BidRequest.Imp.Native.assets列表中第几个元素（从0开始）
         message Text {
           optional string v = 1;                // 文字内容
         }
