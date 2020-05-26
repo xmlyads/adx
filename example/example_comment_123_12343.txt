@@ -1,0 +1,132 @@
+评论广告静态图样式回复示例：tagid：123，styleid：12343
+请求体：
+api_version: "v1.0"
+id: "3375821336472"
+imp {
+  id: "337582133647201"
+  tagid: "123"
+  style {
+    style: 12343
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {                    // 主图片
+        image {
+          w: 1280
+          h: 720
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+        isoptional: false
+      }
+      assets {                  // 头像logo（类似于用户头像）
+        image {
+          w: 108
+          h: 108
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+        isoptional: false
+      }
+      assets {                   // 主标题，描述素材的文案
+        text {
+          len: 36
+        }
+        isoptional: false
+      }
+      assets {                   // 广告主昵称（类似于用户的昵称）
+        text {
+          len: 18
+        }
+        isoptional: false
+      }
+      assets {                    // 行动按钮（比如“立即查看”）
+        text {
+          len: 8
+        }
+        isoptional: false
+      }
+    }
+  }
+  dealid: "756643"
+  date: "2020-05-26"
+  brightscreen: true
+}
+device {
+  ua: "Mozilla/5.0 (Linux; Android 8.1.0; JKM-AL00 Build/HUAWEIJKM-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36"
+  ip: "106.33.77.245"
+  geo {
+    lat: 34.616790771484375
+    lon: 113.6439437866211
+  }
+  imeimd5: "F57AF12FA05F8CBEF8BA28A60A77913A"
+  androididmd5: "B7CDBD8E4F9DF632F816189BEFF5778C"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  devicetype: 1
+  h: 2137
+  w: 1080
+  os: "Android28"
+  osv: "28"
+  carrier: 2
+  connectiontype: 2
+  make: "HUAWEI"
+  oaidmd5: "09E47015334396A03B1F8F4676813CAC"
+  model: "JKM-AL00"
+  oaid: "ffbd823a-7f67-5d8f-f7fb-fd9febfe2af5"
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+
+id "3375821362300"
+seatbid {
+  bid {
+    id: "bid_1590459421"
+    impid: "337582136230001"
+    price: 500.0
+    crid: "225901066"
+    native {
+      assets {
+        image {
+          w: 1124
+          h: 624
+          url: "https://static.yximgs.com/udata/pkg/b796f647d4a0292af0c77be7fba90b3a"
+        }
+      }
+      assets {
+        image {
+          url: "http://static.yximgs.com/udata/pkg/ca671d5fed394afeab49763692167675.jpg"
+        }
+      }
+      assets {
+        text {
+          v: "\346\203\263\350\246\201\345\201\245\350\272\253\345\217\210\344\270\215\347\237\245\351\201\223\345\246\202\344\275\225\345\245\275?\345\227\250\347\230\246\346\225\231\344\275\240\350\256\255\347\273\203,\350\277\230\346\234\211\346\234\272\344\274\232\345\205\215\350\264\271\351\242\206\345\217\2265G\346\211\213\346\234\272"
+        }
+      }
+      assets {
+        text {
+          v: "\345\227\250\347\230\246"
+        }
+      }
+      assets {
+        text {
+          v: ""
+        }
+      }
+    }
+    clickurl: "https://ime.cdn.cootekservice.com/default/hithin/channel/HiThin_01C001.apk"
+    monitorurls: "https://adx.maplehaze.cn/report/expose?report_id=2866f2b6b71a16023624e654cf3e8fd2&uid=11dfaf71275bad896792b7c95f56448f&app_id=10154&pos_id=56313&app_bundle=com.ximalaya.ting.android&os=android&android_id_md5=e34b99cdc2e7677d59160e8f22cb3fcc"
+    monitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/show?pr=__PR__"
+    monitorurls: "https://touchlife.cootekservice.com/page_v3/kuaishou_record_ad_click"
+    clickmonitorurls: "https://adx.maplehaze.cn/report/click?req_width=0&req_height=0&width=1080&height=2156&down_x=__DOWN_X__&down_y=__DOWN_Y__&up_x=__UP_X__&up_y=__UP_Y__"
+    clickmonitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/click?pr=__PR__&width=1080&height=2156&downX=__DOWN_X__&downY=__DOWN_Y__&upX=__UP_X__&upY=__UP_Y__"
+    style: 12343
+    clicktype: 0
+  }
+}
