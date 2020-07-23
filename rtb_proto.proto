@@ -126,7 +126,7 @@ message BidResponse {
     optional int32 videoduration = 5;           // Video素材的时长
     optional string crid = 6;                   // DSP侧内部创意ID，建议填写
     optional Native native = 7;                 // Native素材对象
-    optional string providerName = 8;           // 广告主昵称，clicktype=4时，必填
+    optional string providerName = 8;           // 广告主昵称，clicktype=4时，建议填写
     optional string phoneNumber = 9;            // 电话号码，clicktype=4时，必填
     optional string clickurl = 10;               // 点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
     repeated string monitorurls = 11;            // 曝光监测地址
