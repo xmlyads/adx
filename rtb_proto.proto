@@ -30,7 +30,7 @@ message BidRequest {
     optional bool brightscreen = 11;            // 屏幕是否点亮，屏幕关闭只出有声广告（仅有声广告需要关心）, true: 亮屏；false: 闭屏
     message StyleType {
       optional int32 style = 1;                // 展示形式，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
-      repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载；4：拨打电话
+      repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载；4：拨打电话 （请求和回复示例：https://github.com/wshg0809/xmadx/blob/master/example/example_sound_0_10016_4.txt）
       optional bool needsound = 3;           // 是否需要声音，如需要声音，则会在native.assets中追加声音规格要求
       optional Native native = 4;             // 原生广告对象（目前所有广告都使用这个对象） 
     }
