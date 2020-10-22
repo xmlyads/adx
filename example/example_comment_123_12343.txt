@@ -70,7 +70,7 @@ device {
   h: 2137
   w: 1080
   os: "Android28"
-  osv: "28"
+  osv: "9"
   carrier: 2
   connectiontype: 2
   make: "HUAWEI"
