@@ -68,7 +68,7 @@ device {
   h: 2076
   w: 1080
   os: "Android26"
-  osv: "26"
+  osv: "9"
   carrier: 3
   connectiontype: 3
   make: "samsung"
