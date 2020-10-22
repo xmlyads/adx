@@ -50,7 +50,7 @@ device {
   h: 2150
   w: 1080
   os: "Android27"
-  osv: "27"
+  osv: "9"
   carrier: 3
   connectiontype: 3
   make: "Xiaomi"
