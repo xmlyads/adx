@@ -31,8 +31,8 @@ message BidRequest {
     message StyleType {
       optional int32 style = 1;                // 展示形式，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
       repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载；4：拨打电话 （请求和回复示例：https://github.com/wshg0809/xmadx/blob/master/example/example_sound_0_10016_4.txt）
-      optional bool needsound = 3;           // 是否需要声音，如需要声音，则会在native.assets中追加声音规格要求
-      optional Native native = 4;             // 原生广告对象（目前所有广告都使用这个对象） 
+      optional bool needsound = 3;           // 是否需要声音，如需要声音，则会在native.assets中追加声音规格要求（先审后投不适用）
+      optional Native native = 4;             // 原生广告对象（目前所有广告都使用这个对象，但先审后投不适用） 
     }
     message Banner {
       optional int32 w = 1;                    // 广告位宽度
@@ -125,8 +125,9 @@ message BidResponse {
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
     optional string crid = 6;                   // DSP侧内部创意ID，建议填写
-    optional Native native = 7;                 // Native素材对象
-    optional string clickurl = 8;               // 点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
+    optional string advertiserid = 5;           // 素材在喜马侧广告主ID（仅先审后投适用）
+    optional Native native = 7;                 // Native素材对象（先审后投不适用）
+    optional string clickurl = 8;               // 点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中（先审后投不适用）
     repeated string monitorurls = 9;            // 曝光监测地址
     repeated string clickmonitorurls = 10;       // 点击监测地址
     optional int32 style = 11;                  // 展示类型：对应BidRequest中的style
