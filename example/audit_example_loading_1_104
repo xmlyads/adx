@@ -1,4 +1,4 @@
-非全屏静态开机样式回复示例：tagid：1，styleid：104
+非全屏静态开机样式回复示例：tagid：1，styleid：4
 请求体：
 api_version: "v1.0"
 id: "3375821336472"
@@ -6,7 +6,7 @@ imp {
   id: "337582133647201"
   tagid: "1"
   style {
-    style: 104
+    style: 4
     clicktype: 0
     clicktype: 2
   }
@@ -57,7 +57,7 @@ seatbid {
     monitorurls: "https://touchlife.cootekservice.com/page_v3/kuaishou_record_ad_click"
     clickmonitorurls: "https://adx.maplehaze.cn/report/click?req_width=0&req_height=0&width=1080&height=2156&down_x=__DOWN_X__&down_y=__DOWN_Y__&up_x=__UP_X__&up_y=__UP_Y__"
     clickmonitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/click?pr=__PR__&width=1080&height=2156&downX=__DOWN_X__&downY=__DOWN_Y__&upX=__UP_X__&upY=__UP_Y__"
-    style: 104
+    style: 4
     clicktype: 0
   }
 }
