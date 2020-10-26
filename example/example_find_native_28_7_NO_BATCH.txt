@@ -1,0 +1,120 @@
+首页大图请求回复示例：tagid(28), styleid: 7
+请求：
+api_version: "v1.0"
+id: "3298226833090"
+imp {
+  id: "329822683309001"                // 曝光机会1
+  tagid: "28"
+  style {
+    style: 7
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {
+        image {             // 主图片
+          w: 1280
+          h: 720
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+        isoptional: false
+      }
+      assets {           // 主标题
+        text {
+          len: 20
+        }
+        isoptional: false
+      }
+      assets {          // 副标题
+        text {
+          len: 30
+        }
+        isoptional: true
+      }
+      assets {          // 行动按钮
+        text {
+          len: 6
+        }
+        isoptional: true
+      }
+    }
+  }
+  dealid: "756348"
+  date: "2020-05-14"
+  brightscreen: true
+}
+device {
+  ua: ""
+  ip: "111.198.52.248"
+  geo {
+    lat: 39.97631072998047
+    lon: 116.30048370361328
+  }
+  idfamd5: "DAA1F15FC699DC9995D8D1DBAC6295FE"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "DAA1F15FC699DC9995D8D1DBAC6295FE"
+  devicetype: 1
+  h: 2436
+  w: 1125
+  os: "iOS"
+  osv: "13.3.1"
+  carrier: 0
+  connectiontype: 3
+  make: "iPhone"
+  model: "iPhone10-3"
+  idfa: "ABFA7D70-02A3-430F-929E-6A724774212E"
+}
+user {
+}
+app {
+  name: "\345\226\234\351\251\254\346\213\211\351\233\205FM"
+  pkgname: "com.gemd.iting"
+  category: "\347\224\265\345\217\260"
+  category: "\346\234\211\345\243\260\344\271\246"
+  category: "\345\250\261\344\271\220"
+}
+
+响应：
+id: "3298226833090"
+seatbid {
+  bid {
+    id: "bid_1591870966"
+    impid: "329822683309001"       // 曝光机会1的回复
+    price: 500.0
+    crid: "222454800"
+    native {
+      assets {
+        image {
+          w: 1280
+          h: 720
+          url: "https://static.yximgs.com/udata/pkg/a509e6f49fdddcb3f24b6424brre0bfc07"
+        }
+      }
+      assets {
+        text {
+          v: "\346\257\217\345\244\251\350\265\260\350\267\257\350\203\275\350\265\232\347\216\260\351\207\221,1\345\205\203\345\217\257\346\217\220\347\216\260,\350\200\201\351\223\201\344\273\254\350\265\266\347\264\247\344\270\213\350\275\275\345\220\247"
+        }
+      }
+      assets {
+        text {
+          v: "\346\257\217\345\244\251\350\265\260\350\267\257\350\203\275\350\265\232\347\216\260\351\207\221"
+        }
+      }
+      assets {
+        text {
+          v: "立即查看"
+        }
+      }
+    }
+    clickurl: "https://itunes.apple.com/app/apple-store/id1474052323?pt=119400887&ct=tg&mt=8"
+    monitorurls: "https://adx.maplehaze.cn/report/expose?report_id=a4b581b7e51ddbbb812296b72a55d190&uid=cdab2c07463c09d2efee5160bf345ca6&app_id=10155&pos_id=56289&app_bundle=com.gemd.iting&os=ios&idfa=CC273EA8-48AB-4246-B34F-D2F46C4CEBA6&manufacturer=Apple&model=iPhone9-2&osv=13.4.1&carrier=1&connect_type=1&device_type=1&p_app_id=400200073&p_pos_id=4002000248&tagid=xmly_0_10016_ios&pid=153"
+    monitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/show?pr=__PR__"
+    monitorurls: "https://downclick.yiqibuduoduo.com/bdddownclick/clickReport"
+    clickmonitorurls: "https://adx.maplehaze.cn/report/click?req_width=0&req_height=0&width=1242&height=2208"
+    clickmonitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/click?pr=__PR__&width=1242&height=2208&downX=__DOWN_X__&downY=__DOWN_Y__&upX=__UP_X__&upY=__UP_Y__"
+    style: 7
+    clicktype: 0
+  }
+}
