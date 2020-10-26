@@ -1,4 +1,4 @@
-非全屏静态开机样式回复示例：tagid：1，styleid：104
+非全屏静态开机样式回复示例：tagid：1，styleid：4
 请求体：
 api_version: "v1.0"
 id: "3375821336472"
@@ -6,7 +6,7 @@ imp {
   id: "337582133647201"
   tagid: "1"
   style {
-    style: 104
+    style: 4
     clicktype: 0
     clicktype: 2
   }
@@ -57,7 +57,7 @@ seatbid {
     monitorurls: "https://touchlife.cootekservice.com/page_v3/kuaishou_record_ad_click"
     clickmonitorurls: "https://adx.maplehaze.cn/report/click?req_width=0&req_height=0&width=1080&height=2156&down_x=__DOWN_X__&down_y=__DOWN_Y__&up_x=__UP_X__&up_y=__UP_Y__"
     clickmonitorurls: "https://open.e.kuaishou.com/rest/e/v2/open/log/click?pr=__PR__&width=1080&height=2156&downX=__DOWN_X__&downY=__DOWN_Y__&upX=__UP_X__&upY=__UP_Y__"
-    style: 104
+    style: 4
     clicktype: 2
     appinfo {
       dplink: "tbopen://m.taobao.com/tbopen/index.html?action=ali.open.nav&module=h5&source=alimama&visa=5d429034ad046701&appkey=25801606&bc_fl_src=tanx_df_61744793_0b0c747b000011895d8a2d47194ce89a_15682_102530_36955_3031_3512_2&backURL=iting%3a%2f%2fopen&packageName=com.ximalaya.ting.android&h5Url=http%3a%2f%2fclick.tanx.com%2ftf%3fe%3dOGXuyxQ8A9xFIEPyQfxed3uIYOJ6c5AfxfNVaQZ5ywpu7jHeHAuRUFyEbsHVmZhDpevYz0Y3QXiSIV6O6o2C%252F179%252B%252BPIlo7WwS4A8thxaejhvRL3M4OpXM0UzttjA7h8jw8318T9WvaDrJDSn6B%252BRwwHp6iGZ9ibJm%252FeYbY6Kbc1Gl6Pqua0rruvWIik4JHlPZb2dgu5kGH7hdhsyAoA4cSLf5XFcfs3sfebvsJS58vgbiIvWU9YUoHDtAupzIZAjM2a7dDR7AwJPpMejvYoGky%252FYZFFS%252BFe3PotVSBJGSDwfbtMSTA4DlFrTzwcQ3eQAB22Qd6wTD4xKqW4Z9BdrQ%253D%253D%26u%3dhttps%253A%252F%252Fmarket.m.taobao.com%252Fapps%252Fabs%252F5%252F54%252Fkudongcheng%253Fdf_sid%253D0b0c747b000011895d8a2d47194ce89a%2526_wvUseWKWebView%253DYES%2526psId%253D67332%2526pcPsId%253D67333%2526_oneId%253D39A9070B5DF26445ABB925C747F53EE5D2B0C995343E602BEAAC92AA4C5295DB%2526resource_id%253D15682%26k%3d344&bootImage=0"
