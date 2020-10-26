@@ -125,8 +125,8 @@ message BidResponse {
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
     optional string crid = 6;                   // DSP侧内部创意ID，建议填写
-    optional string advertiserid = 5;           // 素材在喜马侧广告主ID（仅先审后投需要返回此字段）
-    optional Native native = 7;                 // Native素材对象（先审后投不需要返回此字段）
+    optional string advertiserid = 5;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
+    optional Native native = 7;                 // 【物料需要审核的DSP忽略该字段】Native素材对象
     optional string clickurl = 8;               // 点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中（先审后投不需要返回此字段）
     repeated string monitorurls = 9;            // 曝光监测地址
     repeated string clickmonitorurls = 10;       // 点击监测地址
