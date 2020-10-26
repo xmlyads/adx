@@ -87,6 +87,6 @@ seatbid {
     monitorurls: "http://123456.com/monitorurl2"
     clickmonitorurls: "http://123456.com/clickmonitorurl"
     clickmonitorurls: "http://123456.com/clickmonitorurl2"
-    style: 7016
+    style: 7018
   }
 }
