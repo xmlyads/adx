@@ -5,7 +5,7 @@ imp {
   id: "274617585591601"
   tagid: "0"
   style {
-    style: 10022
+    style: 10021
     clicktype: 0
     clicktype: 2
     needsound: false
@@ -99,7 +99,7 @@ seatbid {
     monitorurls: "http://beta-ade-rtb.netease.com/v1/monitor/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&promotion_id=79&creative_id=2137&resg=255498&resp=532792&aid=532792&mm=27750&mt=22377&rt=1&style=2472&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&dev_ver=1&ts=1581930607"
     clickmonitorurls: "http://drpf-edt.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&creative_id=2137&resg=255498&resp=532792&mm=27750&mt=22377&rt=1&style=2472&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&ts=1581930607"
     clickmonitorurls: "http://drpf-g0.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&creative_id=2137&resg=255498&resp=532792&mm=27750&mt=22377&rt=1&style=2472&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&ts=1581930607"
-    style: 10022
+    style: 10021
     clicktype: 0
   }
 }
