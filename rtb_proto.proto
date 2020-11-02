@@ -130,7 +130,7 @@ message BidResponse {
     optional string clickurl = 9;               // 【物料需要审核的DSP忽略该字段】点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
     repeated string monitorurls = 10;            // 曝光监测地址
     repeated string clickmonitorurls = 11;       // 点击监测地址
-    optional int32 style = 12;                  // 展示类型：对应BidRequest中的style
+    optional int32 style = 12;                  // 【物料需要审核的DSP忽略该字段】展示类型：对应BidRequest中的style
     optional int32 clicktype = 13;              // 点击类型：对应BidRequest中的clicktype
     optional AppInfo appinfo = 14;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
     optional PhoneInfo phoneinfo = 15;          // clicktype=4时，必填，拨打电话相关信息
