@@ -105,7 +105,7 @@ seatbid {
     monitorurls: "http://ad.ximalaya.com/monitor1"
     monitorurls: "http://ad.ximalaya.com/monitor2"
     clickmonitorurls: "http://ad.ximalaya.com/clickmonitor1"
-    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor1"
+    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor2"
     style: 10
     clicktype: 0
   }
