@@ -78,7 +78,7 @@ seatbid {
         image {
           w: 1280
           h: 720
-          url: "http://edt.fp.ps.netease.com/file/5dcbc580143cfa3dbc6478d8jyzIAOry02.jpg"
+          url: "http://cdn.ximalaya.com/file/5dcbc580143cfa3dbc6478d8jyzIAOry02.jpg"
         }
       }
       assets {
@@ -92,12 +92,12 @@ seatbid {
         }
       }
     }
-    clickurl: "http://yixiu.game.163.com/A82C39FC1F8E4D52/index.html"
-    monitorurls: "http://ade-rtb.netease.com/v1/monitor/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&promotion_id=79&creative_id=2137&resg=255498&resp=532792&aid=532792&mm=27750&mt=22377&rt=1&style=2472&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&dev_ver=1&ts=1581930607"
-    monitorurls: "http://drpf-g0.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&promotion_id=79&creative_id=2137&resg=255498&resp=532792&aid=532792&mm=27750&mt=22377&rt=1&style=2472&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&dev_ver=1&ts=1581930607"
-    monitorurls: "http://beta-ade-rtb.netease.com/v1/monitor/?project=edt&source=adlog&type=adx_view&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&promotion_id=79&creative_id=2137&resg=255498&resp=532792&aid=532792&mm=27750&mt=22377&rt=1&style=2472&g=1494&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&dev_ver=1&ts=1581930607"
-    clickmonitorurls: "http://drpf-edt.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&creative_id=2137&resg=255498&resp=532792&mm=27750&mt=22377&rt=1&style=2472&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&ts=1581930607"
-    clickmonitorurls: "http://drpf-g0.proxima.nie.netease.com/?project=edt&source=adlog&type=adx_click&os=2&osv=27&ip=116.21.58.92&adx=xmadx&mid=141&req_id=2746175855916&imp_id=274617585591601&tag_id=null&tag_res=410400&udid=-2&imei5=A65D3A958C13CDA1AB66C3B57B1F884C&campaign_id=40312&creative_id=2137&resg=255498&resp=532792&mm=27750&mt=22377&rt=1&style=2472&bid_price=10000&ch_t=1&b_s=1&udt=2&uc=4&ts=1581930607"
+    clickurl: "http://ad.ximalaya.com/clickurl"
+    monitorurls: "http://ad.ximalaya.com/monitor1"
+    monitorurls: "http://ad.ximalaya.com/monitor2"
+    monitorurls: "http://ad.ximalaya.com/monitor3"
+    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor1"
+    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor2"
     style: 10016
     clicktype: 4 （拨打电话）
     （拨打电话回复）
