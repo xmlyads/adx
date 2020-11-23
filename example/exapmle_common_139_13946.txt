@@ -53,7 +53,7 @@ device {
 user {
 }
 app {
-  pkgname: "com.ximalaya.ting.android"
+  pkgname: "com.ximalaya.ting.lite"
 }
 
 响应：
