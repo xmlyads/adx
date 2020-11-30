@@ -13,8 +13,8 @@ imp {
     native {
       assets {                    // 主图
         image {
-          w: 1280
-          h: 720
+          w: 1041
+          h: 375
           mimes: "jpg"
           mimes: "jpeg"
           mimes: "png"
@@ -26,12 +26,6 @@ imp {
           len: 26
         }
         isoptional: false
-      }
-      assets {                    // 行动按钮文本
-        text {
-          len: 6
-        }
-        isoptional: true
       }
     }
   }
@@ -86,12 +80,6 @@ seatbid {
           v: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
         }
         index: 1
-      }
-      assets {
-        text {
-          v: "查看详情"
-        }
-        index: 2
       }
     }
     clickurl: "https://github.com/wshg0809/xmadx/blob/master/rtb_proto.proto"
