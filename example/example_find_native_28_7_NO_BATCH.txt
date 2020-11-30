@@ -23,19 +23,13 @@ imp {
       }
       assets {           // 主标题
         text {
-          len: 20
+          len: 18
         }
         isoptional: false
       }
       assets {          // 副标题
         text {
-          len: 30
-        }
-        isoptional: true
-      }
-      assets {          // 行动按钮
-        text {
-          len: 6
+          len: 25
         }
         isoptional: true
       }
@@ -100,11 +94,6 @@ seatbid {
       assets {
         text {
           v: "\346\257\217\345\244\251\350\265\260\350\267\257\350\203\275\350\265\232\347\216\260\351\207\221"
-        }
-      }
-      assets {
-        text {
-          v: "立即查看"
         }
       }
     }
