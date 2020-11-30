@@ -13,8 +13,8 @@ imp {
     native {
       assets {
         image {             // 主图片
-          w: 1280
-          h: 720
+          w: 1065
+          h: 426
           mimes: "jpg"
           mimes: "jpeg"
           mimes: "png"
