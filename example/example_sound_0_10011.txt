@@ -41,6 +41,13 @@ imp {
         text {
           len: 18
         }
+        isoptional: true
+      }
+      assets {
+        text {
+          len: 4
+        }
+        isoptional: true
       }
     }
   }
