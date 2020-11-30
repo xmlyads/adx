@@ -36,6 +36,7 @@ imp {
           mimes: "jpeg"
           mimes: "png"
         }
+        isoptional: true
       }
       assets {
         text {
