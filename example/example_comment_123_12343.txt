@@ -47,7 +47,7 @@ imp {
         text {
           len: 8
         }
-        isoptional: false
+        isoptional: true
       }
     }
   }
