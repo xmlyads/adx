@@ -30,8 +30,14 @@ imp {
       }
       assets {              // 泡泡条标题文字
         text {
-          len: 18
+          len: 36
         }
+      }
+       assets {             // 行动按钮文本
+        text {
+          len: 4
+        }
+        isoptional:true
       }
     }
   }
