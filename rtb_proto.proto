@@ -125,15 +125,15 @@ message BidResponse {
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
     optional string crid = 6;                   // DSP侧内部创意ID，建议填写
-    optional string advertiserid = 7;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
-    optional Native native = 8;                 // 【物料需要审核的DSP忽略该字段】Native素材对象
-    optional string clickurl = 9;               // 【物料需要审核的DSP忽略该字段】点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
-    repeated string monitorurls = 10;            // 曝光监测地址
-    repeated string clickmonitorurls = 11;       // 点击监测地址
-    optional int32 style = 12;                  // 【物料需要审核的DSP忽略该字段】展示类型：对应BidRequest中的style
-    optional int32 clicktype = 13;              // 点击类型：对应BidRequest中的clicktype
-    optional AppInfo appinfo = 14;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
-    optional PhoneInfo phoneinfo = 15;          // clicktype=4时，必填，拨打电话相关信息
+    optional Native native = 7;                 // 【物料需要审核的DSP忽略该字段】Native素材对象
+    optional string clickurl = 8;               // 【物料需要审核的DSP忽略该字段】点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
+    repeated string monitorurls = 9;            // 曝光监测地址
+    repeated string clickmonitorurls = 10;       // 点击监测地址
+    optional int32 style = 11;                  // 【物料需要审核的DSP忽略该字段】展示类型：对应BidRequest中的style
+    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
+    optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
+    optional PhoneInfo phoneinfo = 14;          // clicktype=4时，必填，拨打电话相关信息
+    optional string advertiserid = 15;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
     message Native {
       repeated Asset assets = 1;                // Native 物料列表，对回复的形式有疑问，可以参考复杂样式的回复示例：https://github.com/wshg0809/xmadx/blob/master/example/example_comment_123_12343.txt
       message Asset {                           // 广告中的元素，注意：Asset中的Text/Image/Video/Audit结构仅能有一个. 参考请求中的BidRequest.Native.Asset
