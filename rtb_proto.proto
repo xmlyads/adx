@@ -21,7 +21,7 @@ message BidRequest {
     required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
     optional string tagid = 2;                  // 广告位ID，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
     repeated StyleType style = 3;               // 允许的展示及点击形式
-    optional float bidfloor = 4;                // RTB竞价底价(分/千次曝光)
+    optional float bidfloor = 4;                // RTB竞价底价(分/千次曝光，分后面的小数直接丢弃，未四舍五入)
     optional Banner banner = 5;                 // [保留字段] Banner广告对象
     optional Video video = 6;                   // [保留字段] Video广告对象（目前未使用)
     repeated string dealid = 8;                 // 描述PDB/PD类型的Deal信息，目前只有一个
@@ -121,7 +121,7 @@ message BidResponse {
   message Bid {
     optional string id = 1;                     // dsp侧针对这次竞价的ID
     optional string impid = 2;                  // 曝光ID，对应BidRequest.imp.id，必填！
-    optional float price = 3;                   // DSP出价，分/千次曝光
+    optional float price = 3;                   // DSP出价，分/千次曝光，分后面的小数直接丢弃，不进行四舍五入等运算
     optional string curl = 4;                   // Banner或Video素材的URL
     optional int32 videoduration = 5;           // Video素材的时长
     optional string crid = 6;                   // DSP侧内部创意ID，建议填写
