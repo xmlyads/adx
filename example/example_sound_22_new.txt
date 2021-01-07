@@ -1,0 +1,102 @@
+请求：
+api_version: "v1.0"
+id: "2746175855916"
+imp {
+  id: "274617585591601"
+  tagid: "0"
+  style {
+    style: 10016
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {
+        image {
+          w: 1280
+          h: 720
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+      }
+      assets {
+        text {
+          len: 18
+        }
+      }
+      assets {
+        text {
+          len: 4
+        }
+        isoptional:true
+      }
+    }
+  }
+  dealid: "600004"
+  date: "2020-02-17"
+}
+device {
+  ua: "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Lite Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.116 Mobile Safari/537.36"
+  ip: "116.21.58.92"
+  geo {
+    lat: 0.0
+    lon: 0.0
+  }
+  imeimd5: "A65D3A958C13CDA1AB66C3B57B1F884C"
+  androididmd5: "5FAABD1059C7ED78A10937F0906DE9C1"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "1E85EAB240480E389C0D928B9DB18D84"
+  devicetype: 1
+  h: 2150
+  w: 1080
+  os: "Android27"
+  osv: "9"
+  carrier: 3
+  connectiontype: 3
+  make: "Xiaomi"
+  oaidmd5: "73C8AC3EBDE7AB5D519ECF13FC840A83"
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+
+响应：
+id: "2746175855916"
+bidid: "xmadx_b_274617585591601"
+seatbid {
+  bid {
+    id: "xmadx_b_274617585591601"
+    impid: "274617585591601"
+    price: 10000.0
+    crid: "532792"
+    native {
+      assets {
+        image {
+          w: 1280
+          h: 720
+          url: "http://cdn.ximalaya.com/file/5dcbc580143cfa3dbc6478d8jyzIAOry02.jpg"
+        }
+      }
+      assets {
+        text {
+          v: "\347\275\221\346\230\223\345\206\215\346\224\276\345\233\236\345\220\210\345\210\266\346\211\213\346\270\270"
+        }
+      }
+        assets {
+        text {
+          v: "查看"
+        }
+      }
+    }
+    clickurl: "http://ad.ximalaya.com/A82C39FC1F8E4D52/index.html"
+    monitorurls: "http://ad.ximalaya.com/monitor1"
+    monitorurls: "http://ad.ximalaya.com/monitor2"
+    monitorurls: "http://ad.ximalaya.com/monitor3"
+    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor1"
+    clickmonitorurls: "http://ad.ximalaya.com/clickmonitor2"
+    style: 10016
+    clicktype: 0
+  }
+}
