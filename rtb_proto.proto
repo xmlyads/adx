@@ -114,9 +114,9 @@ message BidRequest {
 message BidResponse {
   optional string id = 1;                       // 请求ID，需与BidRequest.id一致，DSP参与竞价时必须具有该字段
   optional string bidid = 2;                    // dsp侧竞价ID，可不填
-  repeated SeatBid seatbid = 3;                 // DSP参与竞价的具体内容，目前只有一个
+  repeated SeatBid seatbid = 3;                 // DSP参与竞价的具体内容，与BidRequest.imp个数对应
   message SeatBid {
-    repeated Bid bid = 1;                       // DSP参与竞价的位置，与BidRequest.imp对应，每个imp最多只可返回一个bid
+    repeated Bid bid = 1;                       // DSP参与竞价的位置，目前仅返回一个bid
   }
   message Bid {
     optional string id = 1;                     // dsp侧针对这次竞价的ID
