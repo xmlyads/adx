@@ -1,0 +1,155 @@
+// 合并请求示例
+// 请求：
+api_version: "v1.0"
+id: "1495095594"
+imp {                        // 第一个曝光机会
+  id: "149509559401"
+  tagid: "1"
+  style {
+    style: 4
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {
+        image {
+          w: 1242
+          h: 2136
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+      }
+    }
+  }
+  dealid: "223590"
+  date: "2019-11-05"
+}
+imp {                     // 第二个曝光机会
+  id: "149509559402"
+  tagid: "1"
+  style {
+    style: 34
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {
+        image {
+          w: 1242
+          h: 2689
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
+        }
+      }
+    }
+  }
+  dealid: "223590"
+  date: "2019-11-05"
+}
+device {
+  ua: "Mozilla/5.0 (Linux; Android 9; COR-AL10 Build/HUAWEICOR-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.136 Mobile Safari/537.36"
+  ip: "192.168.100.149"
+  geo {
+    lat: 31.217424392700195
+    lon: 121.62703704833984
+  }
+  imeimd5: "BA8C0038019E701A42FA292DE7BC69F0"
+  androididmd5: "3BBEC9FC698C289CC7294F4111413AFE"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "3363EF413230249AB7B5F10F01F94BCC"
+  devicetype: 1
+  h: 1419
+  w: 720
+  os: "Android28"
+  osv: "9"
+  carrier: 3
+  connectiontype: 3
+  make: "HUAWEI"
+  oaidmd5: "8E464AFECF775084F4DEF12DE9D87A23"
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+
+// 响应
+// 两个曝光机会都返回广告
+id: "1495095594"
+seatbid {
+  bid {
+    impid: "149509559401"     // 第一个曝光机会对应的广告，impid为第一个曝光机会对应的imp.id
+    crid: "100000001"
+    native {
+      assets {
+        image {
+          url: "http://fdfs.test.ximalaya.com/group1/M00/21/96/wKgD3l2RZFiAQ5SJAAMAB3Y4Sps973.jpg"
+        }
+      }
+    }
+    clickurl: "http://www.baidu.com"
+    monitorurls: "http://123456.com/monitorurl"
+    monitorurls: "http://123456.com/monitorurl2"
+    clickmonitorurls: "http://123456.com/clickmonitorurl"
+    clickmonitorurls: "http://123456.com/clickmonitorurl2"
+    style: 4
+    clicktype: 2
+    appinfo {
+      dplink: "tbopen://m.taobao.com/tbopen/index.html?action=ali.open.nav&module=h5&source=alimama&visa=5d429034ad046701&appkey=25801606&bc_fl_src=tanx_df_61744793_0b0c747b000011895d8a2d47194ce89a_15682_102530_36955_3031_3512_2&backURL=iting%3a%2f%2fopen&packageName=com.ximalaya.ting.android&h5Url=http%3a%2f%2fclick.tanx.com%2ftf%3fe%3dOGXuyxQ8A9xFIEPyQfxed3uIYOJ6c5AfxfNVaQZ5ywpu7jHeHAuRUFyEbsHVmZhDpevYz0Y3QXiSIV6O6o2C%252F179%252B%252BPIlo7WwS4A8thxaejhvRL3M4OpXM0UzttjA7h8jw8318T9WvaDrJDSn6B%252BRwwHp6iGZ9ibJm%252FeYbY6Kbc1Gl6Pqua0rruvWIik4JHlPZb2dgu5kGH7hdhsyAoA4cSLf5XFcfs3sfebvsJS58vgbiIvWU9YUoHDtAupzIZAjM2a7dDR7AwJPpMejvYoGky%252FYZFFS%252BFe3PotVSBJGSDwfbtMSTA4DlFrTzwcQ3eQAB22Qd6wTD4xKqW4Z9BdrQ%253D%253D%26u%3dhttps%253A%252F%252Fmarket.m.taobao.com%252Fapps%252Fabs%252F5%252F54%252Fkudongcheng%253Fdf_sid%253D0b0c747b000011895d8a2d47194ce89a%2526_wvUseWKWebView%253DYES%2526psId%253D67332%2526pcPsId%253D67333%2526_oneId%253D39A9070B5DF26445ABB925C747F53EE5D2B0C995343E602BEAAC92AA4C5295DB%2526resource_id%253D15682%26k%3d344&bootImage=0"
+      appname: "\346\265\213\350\257\225\345\215\212\345\261\217\351\235\231\346\200\201\345\233\276"
+      pkgname: "com.testapp.main"
+    }
+  }
+  bid {
+    impid: "149509559402"           // 第二个曝光机会对应的广告，impid为第二个曝光机会的imp.id
+    crid: "100000002"
+    native {
+      assets {
+        image {
+          url: "http://fdfs.test.ximalaya.com/group1/M00/21/96/wKgD3l2RZFiAQ5SJAAMAB3Y48768s973.jpg"
+        }
+      }
+    }
+    clickurl: "http://www.baidu.com"
+    monitorurls: "http://123456.com/monitorurl"
+    monitorurls: "http://123456.com/monitorurl2"
+    clickmonitorurls: "http://123456.com/clickmonitorurl"
+    clickmonitorurls: "http://123456.com/clickmonitorurl2"
+    style: 34
+    clicktype: 2
+    appinfo {
+      dplink: "tbopen://m.taobao.com/tbopen/index.html?action=ali.open.nav&module=h5&source=alimama&visa=5d429034ad046701&appkey=25801606&bc_fl_src=tanx_df_61744793_0b0c747b000011895d8a2d47194ce89a_15682_102530_36955_3031_3512_2&backURL=iting%3a%2f%2fopen&packageName=com.ximalaya.ting.android&h5Url=http%3a%2f%2fclick.tanx.com%2ftf%3fe%3dOGXuyxQ8A9xFIEPyQfxed3uIYOJ6c5AfxfNVaQZ5ywpu7jHeHAuRUFyEbsHVmZhDpevYz0Y3QXiSIV6O6o2C%252F179%252B%252BPIlo7WwS4A8thxaejhvRL3M4OpXM0UzttjA7h8jw8318T9WvaDrJDSn6B%252BRwwHp6iGZ9ibJm%252FeYbY6Kbc1Gl6Pqua0rruvWIik4JHlPZb2dgu5kGH7hdhsyAoA4cSLf5XFcfs3sfebvsJS58vgbiIvWU9YUoHDtAupzIZAjM2a7dDR7AwJPpMejvYoGky%252FYZFFS%252BFe3PotVSBJGSDwfbtMSTA4DlFrTzwcQ3eQAB22Qd6wTD4xKqW4Z9BdrQ%253D%253D%26u%3dhttps%253A%252F%252Fmarket.m.taobao.com%252Fapps%252Fabs%252F5%252F54%252Fkudongcheng%253Fdf_sid%253D0b0c747b000011895d8a2d47194ce89a%2526_wvUseWKWebView%253DYES%2526psId%253D67332%2526pcPsId%253D67333%2526_oneId%253D39A9070B5DF26445ABB925C747F53EE5D2B0C995343E602BEAAC92AA4C5295DB%2526resource_id%253D15682%26k%3d344&bootImage=0"
+      appname: "\346\265\213\350\257\225\345\215\212\345\261\217\351\235\231\346\200\201\345\233\276"
+      pkgname: "com.testapp.main"
+    }
+  }
+}
+//只要第二个曝光机会
+id: "1495095594"
+seatbid {
+    bid {
+    impid: "149509559402"           // 第二个曝光机会对应的广告，impid为第二个曝光机会的imp.id
+    crid: "100000002"
+    native {
+      assets {
+        image {
+          url: "http://fdfs.test.ximalaya.com/group1/M00/21/96/wKgD3l2RZFiAQ5SJAAMAB3Y48768s973.jpg"
+        }
+      }
+    }
+    clickurl: "http://www.baidu.com"
+    monitorurls: "http://123456.com/monitorurl"
+    monitorurls: "http://123456.com/monitorurl2"
+    clickmonitorurls: "http://123456.com/clickmonitorurl"
+    clickmonitorurls: "http://123456.com/clickmonitorurl2"
+    style: 34
+    clicktype: 2
+    appinfo {
+      dplink: "tbopen://m.taobao.com/tbopen/index.html?action=ali.open.nav&module=h5&source=alimama&visa=5d429034ad046701&appkey=25801606&bc_fl_src=tanx_df_61744793_0b0c747b000011895d8a2d47194ce89a_15682_102530_36955_3031_3512_2&backURL=iting%3a%2f%2fopen&packageName=com.ximalaya.ting.android&h5Url=http%3a%2f%2fclick.tanx.com%2ftf%3fe%3dOGXuyxQ8A9xFIEPyQfxed3uIYOJ6c5AfxfNVaQZ5ywpu7jHeHAuRUFyEbsHVmZhDpevYz0Y3QXiSIV6O6o2C%252F179%252B%252BPIlo7WwS4A8thxaejhvRL3M4OpXM0UzttjA7h8jw8318T9WvaDrJDSn6B%252BRwwHp6iGZ9ibJm%252FeYbY6Kbc1Gl6Pqua0rruvWIik4JHlPZb2dgu5kGH7hdhsyAoA4cSLf5XFcfs3sfebvsJS58vgbiIvWU9YUoHDtAupzIZAjM2a7dDR7AwJPpMejvYoGky%252FYZFFS%252BFe3PotVSBJGSDwfbtMSTA4DlFrTzwcQ3eQAB22Qd6wTD4xKqW4Z9BdrQ%253D%253D%26u%3dhttps%253A%252F%252Fmarket.m.taobao.com%252Fapps%252Fabs%252F5%252F54%252Fkudongcheng%253Fdf_sid%253D0b0c747b000011895d8a2d47194ce89a%2526_wvUseWKWebView%253DYES%2526psId%253D67332%2526pcPsId%253D67333%2526_oneId%253D39A9070B5DF26445ABB925C747F53EE5D2B0C995343E602BEAAC92AA4C5295DB%2526resource_id%253D15682%26k%3d344&bootImage=0"
+      appname: "\346\265\213\350\257\225\345\215\212\345\261\217\351\235\231\346\200\201\345\233\276"
+      pkgname: "com.testapp.main"
+    }
+  }
+}
