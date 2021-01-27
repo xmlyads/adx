@@ -102,7 +102,9 @@ seatbid {
       pkgname: "com.testapp.main"
     }
   }
-  bid {
+}
+seatbid {
+    bid {
     impid: "149509559402"           // 第二个曝光机会对应的广告，impid为第二个曝光机会的imp.id
     crid: "100000002"
     native {
