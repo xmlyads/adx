@@ -108,7 +108,7 @@ message BidRequest {
     optional string id = 1;                     // [保留字段] 用户唯一标识（喜马拉雅侧用户uid）
   }
   message App {
-    optional string name = 1;                   // 应用名称：喜马拉雅、喜马拉雅极速版等
+    optional string name = 1;                   // 应用名称：喜马拉雅FM、喜马拉雅极速版等
     optional string pkgname = 2;                // 应用程序包名：com.ximalaya.iting
     repeated string category = 3;               // 应用所属分类：电台、有声书、娱乐 
   }
