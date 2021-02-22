@@ -97,7 +97,7 @@ message BidRequest {
     optional string idfa = 19;                // IDFA原始值
     optional string oaid = 20;                // Android OAID原始值
     optional int32 idfalimit = 21;               // iOS设备用户限制IDFA情况：0:未确定，开发者尚未请求用户许可; 1:受限制，用户主动关闭了IDFA追踪，所有APP都无法获取到IDFA; 2: 被拒绝，弹窗后用户选择关闭IDFA授权，喜马自己生成了一个idfa；3.授权，可以继续获取IDFA
-    optional string caid = 22;                 // iOS设备 caid值，详情：http://www.china-caa.org/digital/caid/intro
+    optional string caid = 22;                 // 中广协提供的iOS设备caid值，详情：http://www.china-caa.org/digital/caid/intro
 
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
