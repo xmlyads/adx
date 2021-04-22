@@ -96,8 +96,8 @@ message BidRequest {
     optional string model = 18;                 // 手机型号，如：iPhoneX, KNT-AL10
     optional string idfa = 19;                // IDFA原始值
     optional string oaid = 20;                // Android OAID原始值
-    optional int32 idfalimit = 21;               // 目前该字段尚无意义，预计客户端4月底版本支持该字段. iOS设备用户限制IDFA情况：0:未确定，开发者尚未请求用户许可; 1:受限制，用户主动关闭了IDFA追踪，所有APP都无法获取到IDFA; 2: 被拒绝，弹窗后用户选择关闭IDFA授权，喜马自己生成了一个idfa；3.授权，可以继续获取;只有idfalimit=3时才会传递真正IDFA值IDFA
-    optional string caid = 22;                 // 中广协提供的iOS设备caid值，详情：http://www.china-caa.org/digital/caid/intro
+    optional int32 idfalimit = 21;               // 目前该字段尚无意义. iOS设备用户限制IDFA情况：0:未确定，开发者尚未请求用户许可; 1:受限制，用户主动关闭了IDFA追踪，所有APP都无法获取到IDFA; 2: 被拒绝，弹窗后用户选择关闭IDFA授权，喜马自己生成了一个idfa；3.授权，可以继续获取;只有idfalimit=3时才会传递真正IDFA值IDFA
+    optional string caid = 22;                 // 无效字段
 
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
