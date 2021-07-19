@@ -25,13 +25,13 @@ imp {
         text {
           len: 30
         }
-        isoptional: true
+        isoptional: false
       }
       assets {             // 副标题（描述）
         text {
           len: 30
         }
-        isoptional: true
+        isoptional: false
       }
     }
   }
