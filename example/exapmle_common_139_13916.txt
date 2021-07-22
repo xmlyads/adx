@@ -13,8 +13,8 @@ imp {
     native {
       assets {
         image {               // 竖版主图
-          w: 236
-          h: 420
+          w: 472
+          h: 840
           mimes: "jpg"
           mimes: "jpeg"
           mimes: "png"
