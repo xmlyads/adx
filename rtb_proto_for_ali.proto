@@ -1,0 +1,178 @@
+// Copyright (c) 2019 www.ximalaya.com Inc.
+
+syntax = "proto2";
+
+package com.ximalaya.ad.adx.api;
+
+option java_outer_classname = "RtbProtos";
+
+// 注意：[保留字段] 当前暂时没有使用，可直接忽略
+
+message BidRequest {
+  optional string api_version = 1;              // rtb协议版本（目前固定为"v1.0"）
+  optional string id = 2;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
+  optional int32 at = 3;                       // [保留字段]第一高价还是第二高价竞价
+  repeated Imp imp = 4;                        // 曝光机会列表，一次请求可能会有多个曝光机会
+  optional Site site = 5;                       // [保留字段] 媒体站点信息(PC端)
+  optional Device device = 6;                   // 设备信息
+  optional User user = 7;                       // 用户信息
+  optional App app = 8;                         // APP信息
+  message Imp {
+    required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
+    optional string tagid = 2;                  // 广告位ID，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
+    repeated StyleType style = 3;               // 允许的展示及点击形式
+    optional float bidfloor = 4;                // RTB竞价底价(分/千次曝光，分后面的小数直接丢弃，未四舍五入)
+    optional Banner banner = 5;                 // [保留字段] Banner广告对象
+    optional Video video = 6;                   // [保留字段] Video广告对象（目前未使用)
+    repeated string dealid = 8;                 // 描述PDB/PD类型的Deal信息，目前只有一个
+    optional string forbidtrade = 9;            // [保留字段] 广告位行业限制信息
+    optional string date = 10;                  // 广告曝光日期，格式YYYY-MM-DD
+    optional bool brightscreen = 11;            // 屏幕是否点亮，屏幕关闭只出有声广告（仅有声广告需要关心）, true: 亮屏；false: 闭屏
+    message StyleType {
+      optional int32 style = 1;                // 展示形式，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
+      repeated int32 clicktype = 2;           // 支持的点击类型 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载；4：拨打电话 （请求和回复示例：https://github.com/wshg0809/xmadx/blob/master/example/example_sound_0_10016_4.txt）
+      optional bool needsound = 3;           // 【物料需要审核的DSP忽略该字段】是否需要声音，如需要声音，则会在native.assets中追加声音规格要求
+      optional Native native = 4;             //【物料需要审核的DSP忽略该字段】原生广告对象（目前所有广告都使用这个对象）
+    }
+    message Banner {
+      optional int32 w = 1;                    // 广告位宽度
+      optional int32 h = 2;                    // 广告位高度
+      repeated string mimes = 3;                // 支持的素材类型(如 "jpg","txt")
+    }
+    message Video {
+      repeated string mimes = 1;                // 支持播放的mimes(如 "flv","mp4")
+      optional int32 minduration = 2;          // 最短时长，单位毫秒
+      optional int32 maxduration = 3;          // 最长时长，单位毫秒
+      optional int32 w = 4;                    // 广告位宽度
+      optional int32 h = 5;                    // 广告位高度
+    }
+    message Native {
+      optional int32 seq = 1 [default = 0];     // [保留字段] 广告位置: 0 - 第一条广告；1 - 第二条广告...依次类推
+      repeated Asset assets = 2;                // 广告中包含的元素对象列表，是一个列表
+      message Asset {                           // 广告中的元素对象，注意：Asset中的Text/Image/Video/Audit结构仅能有一个（对应的元素就是一个文字、一张图片、一个视频等）
+        optional Text text = 1;                 // 文字对象
+        optional Image image = 2;               // 图片对象
+        optional BidRequest.Imp.Video video = 3;         // 视频对象
+        optional Audit audit = 4;               // 声音对象
+        optional bool isoptional = 5;           // 该元素对象是否是可选的，可选的元素对象DSP可不回复。eg. 视频大图（含泡泡条）样式所需元素列表：视频、备胎图、泡泡条图片、泡泡条文字，其中泡泡条图片和文字是可选的，DSP没有展示泡泡条的需求时，可不回复。
+        message Text {
+          optional int32 len = 1;               // 允许的文字长度
+        }
+        message Image {
+          optional int32 w = 1;                 // 图片宽度
+          optional int32 h = 2;                 // 图片长度
+          repeated string mimes = 3;            // 支持的图片格式(如"jpeg","gif")
+        }
+        message Audit {
+          repeated string mimes = 1;           // 支持播放的mimes
+          optional int32 minduration = 2;      // 最短时长，单位毫秒
+          optional int32 maxduration = 3;      // 最长时长
+        }
+      }
+    }
+  }
+  message Site {
+    optional string name = 1;                   // 网站名称 （pc专用）
+    optional string page = 2;                   // 当前页面url （pc专用）
+  }
+  message Device {
+    optional string ua = 1;                     // UA信息
+    optional string ip = 2;                     // 用户设备ip
+    optional Geo geo = 3;                       // 地理位置
+    optional string idfamd5 = 4;                // IDFA MD5加密转大写
+    optional string imeimd5 = 5;                // IMEI MD5加密转大写
+    optional string androididmd5 = 6;           // AndroidID MD5加密转大写
+    optional string openudidmd5 = 7;            // OpenUDID，MD5加密转大写
+    optional string macmd5 = 8;                 // MAC地址 MD5加密转大写，加密前先去除分隔符':'
+    optional int32 devicetype = 9;             // 设备类型：0，未知；1，Phone；2，PC；3，TV；4，PAD；5，outdoor（户外设备）目前设备类型只有1，4两种
+    optional int32 h = 10;                      // 设备屏幕纵向分辨率
+    optional int32 w = 11;                      // 设备屏幕横向分辨率
+    optional string os = 12;                    // 操作系统名称（iOS, Android等）
+    optional string osv = 13;                   // 操作系统版本
+    optional int32 carrier = 14;              // 运营商 0，移动；1，联通； 2，电信；3，其它
+    optional int32 connectiontype = 15;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它
+    optional string make = 16;                  // 手机品牌，如：iPhone，Xiaomi
+    optional string oaidmd5 = 17;               // Android OAID MD5加密转大写
+    optional string model = 18;                 // 手机型号，如：iPhoneX, KNT-AL10
+    optional string idfa = 19;                // IDFA原始值
+    optional string oaid = 20;                // Android OAID原始值
+    optional int32 idfalimit = 21;               // 目前该字段尚无意义. iOS设备用户限制IDFA情况：0:未确定，开发者尚未请求用户许可; 1:受限制，用户主动关闭了IDFA追踪，所有APP都无法获取到IDFA; 2: 被拒绝，弹窗后用户选择关闭IDFA授权，喜马自己生成了一个idfa；3.授权，可以继续获取;只有idfalimit=3时才会传递真正IDFA值IDFA
+    optional string caid = 22;                 // 无效字段
+    optional string aaid = 23;                 // 阿里AAID，当idfa无法获取时，填写
+
+    message Geo {
+      optional double lat = 1;                  // 维度：-90至+90
+      optional double lon = 2;                  // 经度：-180至+180
+    }
+  }
+  message User {
+    optional string id = 1;                     // [保留字段] 用户唯一标识（喜马拉雅侧用户uid）
+  }
+  message App {
+    optional string name = 1;                   // 应用名称：喜马拉雅FM、喜马拉雅极速版等
+    optional string pkgname = 2;                // 应用程序包名：com.ximalaya.iting
+    repeated string category = 3;               // 应用所属分类：电台、有声书、娱乐
+  }
+}
+message BidResponse {
+  optional string id = 1;                       // 请求ID，需与BidRequest.id一致，DSP参与竞价时必须具有该字段
+  optional string bidid = 2;                    // dsp侧竞价ID，可不填
+  repeated SeatBid seatbid = 3;                 // DSP参与竞价的具体内容，与BidRequest.imp个数对应
+  message SeatBid {
+    repeated Bid bid = 1;                       // DSP参与竞价的位置，目前仅返回一个bid
+  }
+  message Bid {
+    optional string id = 1;                     // dsp侧针对这次竞价的ID
+    optional string impid = 2;                  // 曝光ID，对应BidRequest.imp.id，必填！
+    optional float price = 3;                   // DSP出价，分/千次曝光，分后面的小数直接丢弃，不进行四舍五入等运算
+    optional string curl = 4;                   // Banner或Video素材的URL
+    optional int32 videoduration = 5;           // Video素材的时长
+    optional string crid = 6;                   // DSP侧内部创意ID，建议填写
+    optional Native native = 7;                 // 【物料需要审核的DSP忽略该字段】Native素材对象
+    optional string clickurl = 8;               // 【物料需要审核的DSP忽略该字段】点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
+    repeated string monitorurls = 9;            // 曝光监测地址
+    repeated string clickmonitorurls = 10;       // 点击监测地址
+    optional int32 style = 11;                  // 【物料需要审核的DSP忽略该字段】展示类型：对应BidRequest中的style
+    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
+    optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
+    optional PhoneInfo phoneinfo = 14;          // clicktype=4时，必填，拨打电话相关信息
+    optional string advertiserid = 15;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
+    message Native {
+      repeated Asset assets = 1;                // Native 物料列表，对回复的形式有疑问，可以参考复杂样式的回复示例：https://github.com/wshg0809/xmadx/blob/master/example/example_comment_123_12343.txt
+      message Asset {                           // 广告中的元素，注意：Asset中的Text/Image/Video/Audit结构仅能有一个. 参考请求中的BidRequest.Native.Asset
+        optional Text text = 1;                 // 文字物料
+        optional Image image = 2;               // 图片物料
+        optional Video video = 3;               // 视频物料
+        optional Audit audit = 4;               // 声音物料
+        optional int32 index = 5;               // 索引，对应BidRequest.Imp.Native.assets列表中第几个元素（从0开始）
+        message Text {
+          optional string v = 1;                // 文字内容
+        }
+        message Image {
+          optional int32 w = 1;                 // 图片宽度
+          optional int32 h = 2;                 // 图片高度
+          optional string url = 3;              // 图片地址
+        }
+        message Video {
+          optional int32 w = 1;                 // 视频宽度
+          optional int32 h = 2;                 // 视频高度
+          optional string url = 3;              // 视频地址
+          optional int32 duration = 4;          // 视频时长
+        }
+        message Audit {
+          optional string url = 1;              // 声音地址
+          optional int32 duration = 2;          // 声音时长
+        }
+      }
+    }
+    message AppInfo {
+      optional string dplink = 1;               // 唤起APP Scheme，iOS Universal Links也填充到该字段中
+      optional string appname = 2;              // 要唤起的APP名称
+      optional string pkgname = 3;              // 要唤起的APP pkgname
+    }
+    message PhoneInfo {
+      optional string providerName = 1;         // 广告主昵称，建议填写
+      optional string phoneNumber = 2;          // 电话号码，必填
+    }
+  }
+}
