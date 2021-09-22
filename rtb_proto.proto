@@ -168,6 +168,8 @@ message BidResponse {
       optional string dplink = 1;               // 唤起APP Scheme，iOS Universal Links也填充到该字段中
       optional string appname = 2;              // 要唤起的APP名称
       optional string pkgname = 3;              // 要唤起的APP pkgname
+      repeated string evokemonitorurl = 4;      // 唤起APP成功检测地址
+      repeated string evokefailmonitorurl = 5;  // 唤起APP失败检测地址
     }
     message PhoneInfo {
       optional string providerName = 1;         // 广告主昵称，建议填写
