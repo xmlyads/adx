@@ -28,12 +28,12 @@ imp {
           mimes: "png"
         }
       }
-      assets {    // 标题，必须返回
+      assets {    // 标题
         text {
           len: 26
         }
       }
-      assets {   // 品牌名称，定帧图展示时显示，可选
+      assets {   // 品牌名称
         text {
           len: 34
         }
