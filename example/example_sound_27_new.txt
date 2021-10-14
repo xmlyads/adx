@@ -21,14 +21,8 @@ imp {
       }
       assets {    // 标题，必须返回
         text {
-          len: 24
+          len: 26
         }
-      }
-      assets {   // 行动按钮文案，可选
-        text {
-          len: 4
-        }
-        isoptional: true
       }
     }
   }
@@ -75,11 +69,6 @@ seatbid {
       assets {
         text {
           v: "这是一条测试视频广告"
-        }
-      }
-      assets {
-        text {
-          v: "立即查看"
         }
       }
     }
