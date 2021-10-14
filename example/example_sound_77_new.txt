@@ -14,7 +14,7 @@ imp {
         video {
           mimes: "mp4"
           minduration: 0
-          maxduration: 15
+          maxduration: 30
           w: 720
           h: 1280
         }
@@ -28,7 +28,17 @@ imp {
           mimes: "png"
         }
       }
-      assets {    // 小图作为视频定帧图，可选，不返回不进行定帧图的展示
+      assets {    // 标题，必须返回
+        text {
+          len: 26
+        }
+      }
+      assets {   // 品牌名称，定帧图展示时显示，可选
+        text {
+          len: 34
+        }
+      }
+      assets {    // 小图作为视频定帧图
         image {
           w: 108
           h: 108
@@ -36,26 +46,16 @@ imp {
           mimes: "jpeg"
           mimes: "png"
         }
-        isoptional: true
       }
-      assets {    // 标题，必须返回
-        text {
-          len: 24
+      assets {              // 视频首帧
+        image {
+          w: 720
+          h: 1280
+          mimes: "jpg"
+          mimes: "jpeg"
+          mimes: "png"
         }
       }
-      assets {   // 行动按钮文案，可选
-        text {
-          len: 4
-        }
-        isoptional: true
-      }
-      assets {   // 品牌名称，定帧图展示时显示，可选
-        text {
-          len: 12
-        }
-        isoptional: true
-      }
-
     }
   }
   dealid: "123456"
@@ -93,7 +93,7 @@ seatbid {
     impid: "173020857601"
     crid: "200000001"
     native {
-      assets {
+     assets {
         video {
           url: "http://fdfs.test.ximalaya.com/group1/M00/74/EE/wKgDpl02bwCALQhVAA2E-c_QadA539.mp4"
         }
@@ -104,23 +104,23 @@ seatbid {
         }
       }
       assets {
+        text {
+          v: "主标题"
+        }
+      }
+      assets {
+        text {
+          v: "品牌名称"
+        }
+      }
+      assets {  
         image {
-          url: ""
+          url: "http://www.ximalaya.com/logo.jpg"
         }
       }
-      assets {
-        text {
-          v: "这是一条测试视频广告"
-        }
-      }
-      assets {
-        text {
-          v: "立即查看"
-        }
-      }
-      assets {
-        text {
-          v: "喜马拉雅"
+      assets { 
+        image {
+          url: "http://www.ximalaya.com/first.jpg"
         }
       }
     }
