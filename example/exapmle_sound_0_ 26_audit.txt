@@ -20,7 +20,7 @@ imp {
           mimes: "png"
         }
       }
-      assets {            // 撒花（目前不支持回传）
+      assets {            // 撒花
         image {
           w: 82
           h: 82
