@@ -102,6 +102,7 @@ message BidRequest {
     optional string update_mark = 25;          // 无效字段
     optional string hms_version = 26;          //华为机型HMS Core版本号
     optional string as_version = 27;           //大陆厂商安卓设备AS版本号
+    optional string paid = 28;          // 无效个性化字段
 
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
