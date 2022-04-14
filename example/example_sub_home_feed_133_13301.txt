@@ -21,7 +21,7 @@ imp {
       }
       assets {             // 标题
         text {
-          len: 36
+          len: 20
         }
       }
     }
