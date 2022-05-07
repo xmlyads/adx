@@ -90,7 +90,7 @@ message BidRequest {
     optional string os = 12;                    // 操作系统名称（iOS, Android等）
     optional string osv = 13;                   // 操作系统版本
     optional int32 carrier = 14;              // 运营商 0，移动；1，联通； 2，电信；3，其它
-    optional int32 connectiontype = 15;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它
+    optional int32 connectiontype = 15;       // 网络连接类型 0，2G；1，3G；2，4G；3，wifi；4，其它；5，5G
     optional string make = 16;                  // 手机品牌，如：iPhone，Xiaomi
     optional string oaidmd5 = 17;               // Android OAID MD5加密转大写
     optional string model = 18;                 // 手机型号，如：iPhoneX, KNT-AL10
