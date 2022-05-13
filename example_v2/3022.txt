@@ -1,0 +1,77 @@
+横版二图二文模板(3022)，竖版贴片示例：tagid(0)
+请求：
+api_version: "v2"
+id: "2481226896"
+imp {
+  id: "248122689601"
+  tagid: "0"
+  templateid:"3022"
+  dealid: "225586"
+  date: "2020-06-04"
+  brightscreen: true
+}
+device {
+  ua: ""
+  ip: "192.168.20.39"
+  geo {
+    lat: 0.0
+    lon: 0.0
+  }
+  imeimd5: "3BED654C26E1B300C28BFB57516A564D"
+  androididmd5: "4FC2648ADCB015BFBA5967382B30C13E"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "24667C9D8EA7928DFA896AE1161A4627"
+  devicetype: 1
+  h: 2076
+  w: 1080
+  os: "Android26"
+  osv: "9"
+  carrier: 3
+  connectiontype: 3
+  make: "samsung"
+  oaidmd5: ""
+  model: "SM-G9500"
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+
+响应：
+id: "2481226896"
+seatbid {
+  bid {
+    impid: "248122689601"
+    crid: "200000001"
+    native {
+      assets {
+        name: "cover"
+        value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.jpg"
+      }
+      assets {
+        name: "name"
+        value: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
+      }
+      assets {
+        name: "description"
+        value: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
+      }
+      assets {
+        name: "logo"
+        value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.jpg"
+      }
+    }
+    clickurl: "https://github.com/wshg0809/xmadx/blob/master/rtb_proto.proto"
+    monitorurls: "http://123456.com/monitorurl"
+    monitorurls: "http://123456.com/monitorurl2"
+    clickmonitorurls: "http://123456.com/clickmonitorurl"
+    clickmonitorurls: "http://123456.com/clickmonitorurl2"
+    clicktype: 2
+    appinfo {
+      dplink: "tbopen://m.taobao.com/tbopen/index.html?action=ali.open.nav&module=h5&source=alimama&visa=5d429034ad046701&appkey=25801606&bc_fl_src=tanx_df_61744793_0b0c747b000011895d8a2d47194ce89a_15682_102530_36955_3031_3512_2&backURL=iting%3a%2f%2fopen&packageName=com.ximalaya.ting.android&h5Url=http%3a%2f%2fclick.tanx.com%2ftf%3fe%3dOGXuyxQ8A9xFIEPyQfxed3uIYOJ6c5AfxfNVaQZ5ywpu7jHeHAuRUFyEbsHVmZhDpevYz0Y3QXiSIV6O6o2C%252F179%252B%252BPIlo7WwS4A8thxaejhvRL3M4OpXM0UzttjA7h8jw8318T9WvaDrJDSn6B%252BRwwHp6iGZ9ibJm%252FeYbY6Kbc1Gl6Pqua0rruvWIik4JHlPZb2dgu5kGH7hdhsyAoA4cSLf5XFcfs3sfebvsJS58vgbiIvWU9YUoHDtAupzIZAjM2a7dDR7AwJPpMejvYoGky%252FYZFFS%252BFe3PotVSBJGSDwfbtMSTA4DlFrTzwcQ3eQAB22Qd6wTD4xKqW4Z9BdrQ%253D%253D%26u%3dhttps%253A%252F%252Fmarket.m.taobao.com%252Fapps%252Fabs%252F5%252F54%252Fkudongcheng%253Fdf_sid%253D0b0c747b000011895d8a2d47194ce89a%2526_wvUseWKWebView%253DYES%2526psId%253D67332%2526pcPsId%253D67333%2526_oneId%253D39A9070B5DF26445ABB925C747F53EE5D2B0C995343E602BEAAC92AA4C5295DB%2526resource_id%253D15682%26k%3d344&bootImage=0"
+      appname: "\346\265\213\350\257\225\345\215\212\345\261\217\351\235\231\346\200\201\345\233\276"
+      pkgname: "com.testapp.main"
+    }
+  }
+}
