@@ -31,7 +31,6 @@ device {
   make: "samsung"
   oaidmd5: ""
   model: "SM-G9500"
-  20: ""
 }
 user {
 }
