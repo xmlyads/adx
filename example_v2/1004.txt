@@ -45,11 +45,11 @@ seatbid {
     impid: "248122689601"
     crid: "200000001"
     native {
-      assets {
+      attr {
         name: "videoCover"
         value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.mp4"
       }
-      assets {
+      attr {
         name: "cover"
         value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.jpg"
       }
