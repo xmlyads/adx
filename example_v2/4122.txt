@@ -45,23 +45,23 @@ seatbid {
     impid: "248122689601"
     crid: "200000001"
     native {
-      assets {
+      attr {
         name: "videoCover"
         value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.mp4"
       }
-      assets {
+      attr {
         name: "cover"
         value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.jpg"
       }
-      assets {
+      attr {
         name: "name"
         value: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
       }
-      assets {
+      attr {
         name: "description"
         value: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
       }
-      assets {
+      attr {
         name: "logo"
         value: "http://fdfs.test.ximalaya.com/group1/M00/3D/88/wKgD3l7YnEKAOKNhAABFZMBPdPg328.jpg"
       }
