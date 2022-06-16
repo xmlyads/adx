@@ -9,7 +9,7 @@ option java_outer_classname = "RtbProtos";
 // 注意：[保留字段] 当前暂时没有使用，可直接忽略
 
 message BidRequest {
-  optional string api_version = 1;              // rtb协议版本（目前固定为"v1.0"）
+  optional string api_version = 1;              // rtb协议版本（目前固定为"v2.0"）
   optional string id = 2;                       // 本次次请求的请求id，dsp需要在回复时在Response.id字段中填写该字段，带回给adx
   optional int32 at = 3;                       // [保留字段]第一高价还是第二高价竞价
   repeated Imp imp = 4;                        // 曝光机会列表，一次请求可能会有多个曝光机会
@@ -107,7 +107,7 @@ message BidResponse {
     optional string clickurl = 8;               // 【物料需要审核的DSP忽略该字段】点击跳转地址，注意：iOS Universal Links不能放到这里，应放到AppInfo.dplink中
     repeated string monitorurls = 9;            // 曝光监测地址
     repeated string clickmonitorurls = 10;       // 点击监测地址
-    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
+    optional int32 clicktype = 12;              // 点击类型：不需要时可不填写
     optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
     optional PhoneInfo phoneinfo = 14;          // clicktype=4时，必填，拨打电话相关信息
     optional string advertiserid = 15;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
