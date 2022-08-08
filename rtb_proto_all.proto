@@ -139,7 +139,7 @@ message BidResponse {
     repeated string monitorurls = 9;            // 曝光监测地址
     repeated string clickmonitorurls = 10;       // 点击监测地址
     optional int32 style = 11;                  // 【物料需要审核的DSP忽略该字段】展示类型：对应BidRequest中的style
-    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype
+    optional int32 clicktype = 12;              // 点击类型：对应BidRequest中的clicktype（ 0：默认跳转落地页；1：不能跳转；2：app唤醒；3：app下载；4：拨打电话；5：跳转小程序）
     optional AppInfo appinfo = 13;              // 唤起APP或下载APP等高级功能涉及到的唤起或者下载的APP信息
     optional PhoneInfo phoneinfo = 14;          // clicktype=4时，必填，拨打电话相关信息
     optional string advertiserid = 15;           // 【仅物料需要审核的DSP需要】素材在喜马侧广告主ID
@@ -180,11 +180,23 @@ message BidResponse {
       }
     }
     message AppInfo {
-      optional string dplink = 1;               // 唤起APP Scheme，iOS Universal Links也填充到该字段中
-      optional string appname = 2;              // 要唤起的APP名称
-      optional string pkgname = 3;              // 要唤起的APP pkgname
-      repeated string evokemonitorurl = 4;      // 要唤起的成功检测上报地址
-      repeated string evokefailmonitorurl = 5;  // 要唤起的失败检测上报地址
+      optional string dplink = 1;                  // [APP唤醒][小程序]唤起APP Scheme/小程序路径Path，iOS Universal Links也填充到该字段中
+      optional string appname = 2;                 // [APP下载][APP唤醒]APP名称
+      optional string pkgname = 3;                 // [APP下载][APP唤醒]APP pkgname
+      repeated string evokemonitorurl = 4;         // [APP唤醒]唤起APP成功检测地址
+      repeated string evokefailmonitorurl = 5;     // [APP唤醒]唤起APP失败检测地址
+      optional string appdesc = 6;                 // [APP下载]APP描述
+      optional string applogo = 7;                 // [APP下载]APP logo
+      optional string appversion = 8;              // [APP下载][下载合规五要素-必填]APP版本号
+      optional string appsize = 9;                 // [APP下载][下载合规五要素-选填]下载包大小
+      optional string appdeveloper = 10;           // [APP下载][下载合规五要素-必填]开发者信息
+      optional string appprivacypolicy = 11;       // [APP下载][下载合规五要素-必填]隐私协议链接
+      repeated AppPermission apppermissions = 12;  // [APP下载][下载合规五要素-必填]权限列表
+      optional string wxminiprogramid = 13;        // [小程序] 小程序ID
+      message AppPermission {
+        optional string permissionname = 1;
+        optional string permissiondesc = 2;
+      }
     }
     message PhoneInfo {
       optional string providerName = 1;         // 广告主昵称，建议填写
