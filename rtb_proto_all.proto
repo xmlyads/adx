@@ -188,7 +188,7 @@ message BidResponse {
       optional string appdesc = 6;                 // [APP下载]APP描述
       optional string applogo = 7;                 // [APP下载]APP logo
       optional string appversion = 8;              // [APP下载][下载合规五要素-必填]APP版本号
-      optional string appsize = 9;                 // [APP下载][下载合规五要素-选填]下载包大小
+      optional string appsize = 9;                 // [APP下载][下载合规五要素-必填]下载包大小
       optional string appdeveloper = 10;           // [APP下载][下载合规五要素-必填]开发者信息
       optional string appprivacypolicy = 11;       // [APP下载][下载合规五要素-必填]隐私协议链接
       repeated AppPermission apppermissions = 12;  // [APP下载][下载合规五要素-必填]权限列表
