@@ -173,13 +173,13 @@ message BidResponse {
     message AppInfo {
       optional string dplink = 1;                  // [APP唤醒][小程序]唤起APP Scheme/小程序路径Path，iOS Universal Links也填充到该字段中
       optional string appname = 2;                 // [APP下载][APP唤醒]APP名称
-      optional string pkgname = 3;                 // [APP下载][APP唤醒]APP pkgname
+      optional string pkgname = 3;                 // [APP下载][APP唤醒][] APP pkgname
       repeated string evokemonitorurl = 4;         // [APP唤醒]唤起APP成功检测地址
       repeated string evokefailmonitorurl = 5;     // [APP唤醒]唤起APP失败检测地址
       optional string appdesc = 6;                 // [APP下载]APP描述
       optional string applogo = 7;                 // [APP下载]APP logo
       optional string appversion = 8;              // [APP下载][下载合规五要素-必填]APP版本号
-      optional string appsize = 9;                 // [APP下载][下载合规五要素-必填]下载包大小
+      optional string appsize = 9;                 // [APP下载][下载合规五要素-选填]下载包大小
       optional string appdeveloper = 10;           // [APP下载][下载合规五要素-必填]开发者信息
       optional string appprivacypolicy = 11;       // [APP下载][下载合规五要素-必填]隐私协议链接
       repeated AppPermission apppermissions = 12;  // [APP下载][下载合规五要素-必填]权限列表

@@ -17,6 +17,7 @@ message BidRequest {
   optional Device device = 6;                   // 设备信息
   optional User user = 7;                       // 用户信息
   optional App app = 8;                         // APP信息
+  optional MissionInfo missionInfo = 9;         //蜜声dsp所需额外信息
   message Imp {
     required string id = 1;                     // 区分于请求ID，标识唯一一次曝光机会，DSP回复时需将该ID填到BidResponse.SeatBid.Bid.impid字段上
     optional string tagid = 2;                  // 广告位ID，详见资源映射表：https://github.com/wshg0809/xmadx/wiki/%E8%B5%84%E6%BA%90%E6%98%A0%E5%B0%84
@@ -72,6 +73,12 @@ message BidRequest {
       }
     }
   }
+  message MissionInfo {
+    optional int64 uid = 1;
+    optional int64 trackId = 2;
+    optional int64 albumId = 3;
+    optional int64 broadcasterId = 4;
+  }
   message Site {
     optional string name = 1;                   // 网站名称 （pc专用）
     optional string page = 2;                   // 当前页面url （pc专用）
@@ -105,6 +112,7 @@ message BidRequest {
     optional string hms_version = 26;            //华为机型HMS Core版本号
     optional string as_version = 27;          // 大陆厂商安卓设备AS版本号
     optional string paid = 28;          // 拼多多ios替代idfa方案
+    optional string ipv6 = 29;          // 用户ipv6地址
 
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
@@ -188,7 +196,7 @@ message BidResponse {
       optional string appdesc = 6;                 // [APP下载]APP描述
       optional string applogo = 7;                 // [APP下载]APP logo
       optional string appversion = 8;              // [APP下载][下载合规五要素-必填]APP版本号
-      optional string appsize = 9;                 // [APP下载][下载合规五要素-必填]下载包大小
+      optional string appsize = 9;                 // [APP下载][下载合规五要素-选填]下载包大小
       optional string appdeveloper = 10;           // [APP下载][下载合规五要素-必填]开发者信息
       optional string appprivacypolicy = 11;       // [APP下载][下载合规五要素-必填]隐私协议链接
       repeated AppPermission apppermissions = 12;  // [APP下载][下载合规五要素-必填]权限列表
