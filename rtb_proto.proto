@@ -184,8 +184,10 @@ message BidResponse {
       optional string appsize = 9;                 // [APP下载][下载合规五要素-选填]下载包大小
       optional string appdeveloper = 10;           // [APP下载][下载合规五要素-必填]开发者信息
       optional string appprivacypolicy = 11;       // [APP下载][下载合规五要素-必填]隐私协议链接
-      repeated AppPermission apppermissions = 12;  // [APP下载][下载合规五要素-必填]权限列表
+      repeated AppPermission apppermissions = 12;  // [已废弃]
       optional string wxminiprogramid = 13;        // [小程序] 小程序ID
+      optional string apppermissionurl = 14;       // [APP下载][下载合规五要素-必填]权限列表
+      optional string downloadurl = 15;            // [APP下载]下载APP的地址
       message AppPermission {
         optional string permissionname = 1;
         optional string permissiondesc = 2;
