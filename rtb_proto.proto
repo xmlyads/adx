@@ -105,7 +105,12 @@ message BidRequest {
     optional string as_version = 27;           //大陆厂商安卓设备AS版本号
     optional string paid = 28;          // 无效个性化字段
     optional string ipv6 = 29;          // 用户ipv6地址
-
+    repeated CAID caids= 30; //caid及对应的version,有多个caid则传多个, 最多两个
+    
+    message CAID {
+      optional string version = 1;
+      optional string caid = 2;
+    }
 
     message Geo {
       optional double lat = 1;                  // 维度：-90至+90
