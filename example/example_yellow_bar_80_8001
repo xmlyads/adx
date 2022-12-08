@@ -1,0 +1,88 @@
+小黄条通用样式示例：tagid(80), styleid(8001)
+请求：
+api_version: "v1.0"
+id: "2481226896"
+imp {
+  id: "248122689601"
+  tagid: "80"
+  style {
+    style: 8001
+    clicktype: 0
+    clicktype: 2
+    needsound: false
+    native {
+      assets {                    // 小黄条描述
+        text {
+          len: 36
+        }
+        isoptional: false
+      }
+      assets {                    // 行动按钮
+        text {
+          len: 10
+        }
+        isoptional: false
+      }
+    }
+  }
+  dealid: "225586"
+  date: "2020-06-04"
+  brightscreen: true
+}
+device {
+  ua: ""
+  ip: "192.168.20.39"
+  geo {
+    lat: 0.0
+    lon: 0.0
+  }
+  imeimd5: "3BED654C26E1B300C28BFB57516A564D"
+  androididmd5: "4FC2648ADCB015BFBA5967382B30C13E"
+  openudidmd5: "D41D8CD98F00B204E9800998ECF8427E"
+  macmd5: "24667C9D8EA7928DFA896AE1161A4627"
+  devicetype: 1
+  h: 2076
+  w: 1080
+  os: "Android26"
+  osv: "9"
+  carrier: 3
+  connectiontype: 3
+  make: "samsung"
+  oaidmd5: ""
+  model: "SM-G9500"
+  20: ""
+}
+user {
+}
+app {
+  pkgname: "com.ximalaya.ting.android"
+}
+
+响应：
+id: "2481226896"
+seatbid {
+  bid {
+    impid: "248122689601"
+    crid: "200000001"
+    native {
+      assets {
+        text { //小黄条描述
+          v: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
+        }
+        index: 0
+      }
+      assets {
+        text { //行动按钮
+          v: "h\346\265\213\350\257\225\346\222\255\346\224\276\351\241\265\344\270\211\347\273\204\345\233\276\344\270\273\346\240\207\351\242\230"
+        }
+        index: 1
+      }
+    }
+    clickurl: "https://github.com/wshg0809/xmadx/blob/master/rtb_proto.proto"
+    monitorurls: "http://123456.com/monitorurl"
+    monitorurls: "http://123456.com/monitorurl2"
+    clickmonitorurls: "http://123456.com/clickmonitorurl"
+    clickmonitorurls: "http://123456.com/clickmonitorurl2"
+    style: 8001
+  }
+}
