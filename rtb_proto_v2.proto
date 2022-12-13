@@ -89,6 +89,7 @@ message BidRequest {
   }
   message User {
     optional string id = 1;                     // [保留字段] 用户唯一标识（喜马拉雅侧用户uid）
+    optional string applist = 2;                // applist安装包
   }
   message App {
     optional string name = 1;                   // 应用名称：喜马拉雅FM、喜马拉雅极速版等
