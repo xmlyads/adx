@@ -78,6 +78,7 @@ message BidRequest {
     optional int64 trackId = 2;
     optional int64 albumId = 3;
     optional int64 broadcasterId = 4;
+    optional int32 insertPatchPosition = 5;
   }
   message Site {
     optional string name = 1;                   // 网站名称 （pc专用）
