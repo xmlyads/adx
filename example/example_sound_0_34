@@ -79,11 +79,6 @@ seatbid {
           v: "你说什么"
         }
       }
-      assets {
-        text {
-          v: "你说你说什么，不知道你说什么"
-        }
-      }
     }
     clickurl: "http://ad.ximalaya.com/A82C39FC1F8E4D52/index.html"
     monitorurls: "http://ad.ximalaya.com/monitor1"
