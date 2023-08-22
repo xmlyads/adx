@@ -107,7 +107,7 @@ message BidRequest {
     optional string ipv6 = 29;          // 用户ipv6地址
     repeated CAID caids= 30; //caid及对应的version,有多个caid则传多个, 最多两个
     optional string osUpdateTime = 31; //系统更新时间
-
+    optional bool pddInstallState = 32;//拼多多的安装状态
     
     message CAID {
       optional string version = 1;
