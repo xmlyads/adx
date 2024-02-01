@@ -3,7 +3,7 @@ api_version: "v1.0"
 id: "1730208576"
 imp {
   id: "173020857601"
-  tagid: "164"
+  tagid: "85"
   style {
     style: 8554
     clicktype: 0
@@ -36,7 +36,7 @@ imp {
        }
        assets {            //描述
           text {
-             len: 36
+             len: 18
           }
        }
     }
