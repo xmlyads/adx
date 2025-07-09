@@ -1,4 +1,4 @@
-评论广告静态图样式回复示例：tagid：123，styleid：12343
+评论广告静态图样式回复示例：tagid：123，styleid：12301
 请求体：
 api_version: "v1.0"
 id: "3375821336472"
@@ -6,7 +6,7 @@ imp {
   id: "337582133647201"
   tagid: "123"
   style {
-    style: 12343
+    style: 12301
     clicktype: 0
     clicktype: 2
     needsound: false
@@ -94,8 +94,8 @@ seatbid {
     native {
       assets {
         image {
-          w: 1124
-          h: 624
+          w: 1280
+          h: 720
           url: "https://static.yximgs.com/udata/pkg/b796f647d4a0292af0c77be7fba90b3a"
         }
       }
